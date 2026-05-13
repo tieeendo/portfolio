@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NimbleRx Pharmacy Lifecycle · Tien Do</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #FFFFFF;
+    --warm-white: #FFFFFF;
+    --sand: #F9F0F2;
+    --clay: #C4849A;
+    --terracotta: #A85470;
+    --deep: #2D1A22;
+    --text-primary: #1E1118;
+    --text-secondary: #6B4F5A;
+    --text-muted: #A8899A;
+    --accent: #A85470;
+    --accent-light: #FAEDF1;
+    --sage: #366B58;
+    --sage-light: #EBF3EF;
+    --sage-dark: #366B58;
+    --border: rgba(168, 84, 112, 0.12);
+    --border-strong: rgba(168, 84, 112, 0.28);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #FFFFFF;
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: #ffffff;
+    padding: 0 4rem;
+    height: 76px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .nav-logo {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--sage);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo span {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-back {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+  }
+
+  .nav-back:hover { color: var(--text-primary); }
+  .nav-back svg { width: 15px; height: 15px; }
+
+  /* HERO */
+  .cs-hero {
+    margin-top: 76px;
+    background: var(--sand);
+    padding: 3.5rem 5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cs-hero-content {
+    max-width: 760px;
+    padding-bottom: 2.5rem;
+  }
+
+  .cs-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .cs-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .cs-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  /* META BAR */
+  .cs-meta-bar {
+    padding: 1.75rem 0;
+    border-top: 2px solid var(--text-primary);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .meta-item { padding-right: 2rem; }
+  .meta-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.35rem;
+  }
+  .meta-value {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* BODY */
+  .cs-body {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .cs-section { margin-bottom: 4rem; }
+
+  .cs-section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+
+  .cs-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+
+  .cs-body p {
+    font-size: 0.97rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  .cs-body p:last-child { margin-bottom: 0; }
+  .cs-body strong { color: var(--text-primary); font-weight: 500; }
+
+  .cs-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+
+  /* SEGMENT CARDS */
+  .segment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .segment-card {
+    background: #fff;
+    border: 1px solid rgba(168,84,112,0.15);
+    border-top: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 1.5rem;
+  }
+
+  .segment-card.sage-top { border-top-color: var(--accent); }
+
+  .segment-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .segment-label.pink { color: var(--accent); }
+
+  .segment-title {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+  }
+
+  .segment-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* FOOTER */
+  .cs-footer {
+    background: var(--sand);
+    border-top: 1px solid var(--border);
+    padding: 2rem 5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  .cs-footer-text {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+
+  .cs-footer a {
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+
+  .cs-footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 760px) {
+    nav { padding: 0 1.5rem; }
+    .cs-hero { padding: 2.5rem 1.5rem; }
+    .cs-meta-bar { grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 1.5rem 0; }
+    .cs-body { padding: 2.5rem 1.5rem; }
+    .segment-grid { grid-template-columns: 1fr; }
+    .cs-footer { padding: 1.5rem; flex-direction: column; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo"><span>TD</span></a>
+  <a href="index.html#work" class="nav-back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to portfolio
+  </a>
+</nav>
+
+<!-- HERO + META -->
+<div class="cs-hero">
+  <div class="cs-hero-content">
+    <p class="cs-eyebrow">NimbleRx · Lead UX Researcher · Q4 2025</p>
+    <h1 class="cs-title">Understanding where pharmacies fall off: before, during, and after launch</h1>
+    <p class="cs-subtitle">A service design study mapping the full pharmacy lifecycle with Nimble, from first sales contact to churn, to uncover where friction was costing us partners.</p>
+  </div>
+  <div style="padding: 1.25rem 0; display: flex; gap: 2rem; align-items: center; border-top: 2px solid var(--text-primary); flex-wrap: nowrap;">
+    <div style="display: flex; gap: 0.4rem; align-items: baseline; white-space: nowrap;">
+      <span style="font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage);">Role</span>
+      <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 500;">Lead UX Researcher</span>
+    </div>
+    <div style="width: 1px; height: 12px; background: var(--border-strong); flex-shrink: 0;"></div>
+    <div style="display: flex; gap: 0.4rem; align-items: baseline; white-space: nowrap;">
+      <span style="font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage);">Methods</span>
+      <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 500;">Interviews · Service blueprinting · Journey mapping</span>
+    </div>
+    <div style="width: 1px; height: 12px; background: var(--border-strong); flex-shrink: 0;"></div>
+    <div style="display: flex; gap: 0.4rem; align-items: baseline; white-space: nowrap;">
+      <span style="font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage);">Timeline</span>
+      <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 500;">Q4 2025</span>
+    </div>
+    <div style="width: 1px; height: 12px; background: var(--border-strong); flex-shrink: 0;"></div>
+    <div style="display: flex; gap: 0.4rem; align-items: baseline; white-space: nowrap;">
+      <span style="font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage);">Platform</span>
+      <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 500;">Cross-functional</span>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div style="border: 1px solid rgba(168,84,112,0.2); border-left: none; border-right: none;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; max-width: 100%;">
+    <div style="padding: 2rem 5rem; border-right: 1px solid rgba(168,84,112,0.15);">
+      <div style="font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); font-weight: 500; margin-bottom: 0.5rem;">The problem</div>
+      <div style="font-size: 0.88rem; color: #1E1118; line-height: 1.7; font-weight: 300;">25% of pharmacies launched in a quarter were churning. The reasons weren't visible in product data alone.</div>
+    </div>
+    <div style="padding: 2rem 5rem;">
+      <div style="font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); font-weight: 500; margin-bottom: 0.5rem;">The outcome</div>
+      <div style="font-size: 0.88rem; color: #1E1118; line-height: 1.7; font-weight: 300; margin-bottom: 0.75rem;">Cross-functional problems surfaced and aligned with leadership, driving measurable improvements across communications, integrations, and patient adoption.</div>
+      <div style="display: flex; gap: 2rem; margin-top: 0.5rem; flex-wrap: wrap;">
+        <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: #A85470; line-height: 1;">48h</span>
+          <span style="font-size: 0.78rem; color: #6B4F5A;">bug resolution + SLAs</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: #A85470; line-height: 1;">+20</span>
+          <span style="font-size: 0.78rem; color: #6B4F5A;">NPS points</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A85470" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.55 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l1.05-1.05a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          <span style="font-size: 0.78rem; color: #6B4F5A;">patient inbounds</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: #A85470; line-height: 1;">↓</span>
+          <span style="font-size: 0.78rem; color: #6B4F5A;">integration churns</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="cs-body">
+
+  <!-- BACKGROUND -->
+  <div class="cs-section">
+    <p class="cs-section-label">Background</p>
+    <h2 class="cs-section-title">Pharmacy churn was a symptom. We needed to find the cause.</h2>
+    <p>NimbleRx grows when pharmacies stay active on the platform and process volume through it. But pharmacies were leaving. Some after a brief unhealthy period on the platform, others before they even launched. The pattern showed up in the data, but the data couldn't explain it.</p>
+    <p>Of the pharmacies launched in any given quarter, <strong>25% were churning</strong>. Churn wasn't just happening at one point. <strong>[X%]</strong> left before ever going live, while <strong>[X%]</strong> disengaged after using the product for a period. The data showed the pattern but couldn't tell us why it was happening at each stage.</p>
+
+    <div style="background: #F9F0F2; border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; padding: 1.25rem 1.75rem; margin: 1.5rem 0;">
+      <p style="font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin: 0 0 0.4rem;">Research question</p>
+      <p style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: var(--text-primary); line-height: 1.25; margin: 0;">Where in the pharmacy lifecycle, from sales to post-launch, are the friction points that lead to low health scores and churn?</p>
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+
+  <!-- CUSTOMER JOURNEY -->
+  <div class="cs-section">
+    <p class="cs-section-label">Customer journey</p>
+    <h2 class="cs-section-title">How pharmacies are meant to launch with Nimble</h2>
+    <p>Understanding the intended lifecycle is key context for where the research uncovered friction.</p>
+
+    <div style="margin-top: 1.75rem; overflow-x: auto;">
+      <style>
+        .cj { font-family: 'Plus Jakarta Sans', sans-serif; min-width: 620px; }
+        .cj-intro { font-size: 11px; color: #A8899A; margin-bottom: 1.75rem; font-style: italic; }
+        .cj-stages { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+        .cj-stages::after { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 2px; background: #EBF3EF; z-index: 0; }
+        .cj-stage { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; padding: 0 8px; }
+        .cj-dot { width: 56px; height: 56px; border-radius: 50%; background: #EBF3EF; border: 1.5px solid #366B58; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+        .cj-dot svg { width: 22px; height: 22px; stroke: #366B58; fill: none; stroke-width: 1.8; }
+        .cj-name { font-size: 12px; font-weight: 500; color: #1E1118; margin-bottom: 3px; }
+        .cj-sub { font-size: 11px; color: #A8899A; line-height: 1.4; }
+        .cj-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 1.75rem; }
+        .cj-card { border-radius: 6px; padding: 12px; border: 0.5px solid #EBF3EF; background: #F4FAF7; display: flex; flex-direction: column; gap: 5px; }
+        .cj-item { font-size: 11px; color: #2D4A3E; line-height: 1.5; padding-left: 10px; position: relative; }
+        .cj-item::before { content: ''; position: absolute; left: 2px; top: 6px; width: 4px; height: 4px; border-radius: 50%; background: #366B58; }
+        .cj-note { font-size: 10.5px; color: #366B58; font-style: italic; margin-top: 6px; padding-top: 6px; border-top: 0.5px solid #D4EAE0; line-height: 1.5; }
+      </style>
+      <div class="cj">
+        <div class="cj-intro">The ideal pharmacy journey. from first contact to active partner on the platform.</div>
+        <div class="cj-stages">
+          <div class="cj-stage">
+            <div class="cj-dot"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="cj-name">Sales</div>
+            <div class="cj-sub">Qualification & contract</div>
+          </div>
+          <div class="cj-stage">
+            <div class="cj-dot"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
+            <div class="cj-name">Onboarding</div>
+            <div class="cj-sub">Setup & training</div>
+          </div>
+          <div class="cj-stage">
+            <div class="cj-dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="cj-name">Phase 1</div>
+            <div class="cj-sub">Getting comfortable</div>
+          </div>
+          <div class="cj-stage">
+            <div class="cj-dot"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+            <div class="cj-name">Phase 2</div>
+            <div class="cj-sub">Core product</div>
+          </div>
+          <div class="cj-stage">
+            <div class="cj-dot"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+            <div class="cj-name">Ramp success</div>
+            <div class="cj-sub">Growth & retention</div>
+          </div>
+        </div>
+        <div class="cj-cards">
+          <div class="cj-card">
+            <div class="cj-item">PMS compatibility confirmed</div>
+            <div class="cj-item">Clear expectations set</div>
+          </div>
+          <div class="cj-card">
+            <div class="cj-item">Integration runs smoothly</div>
+            <div class="cj-item">Staff feel confident and ready</div>
+          </div>
+          <div class="cj-card">
+            <div class="cj-item">Launches on a simpler product</div>
+            <div class="cj-item">Staff and patients adjust</div>
+            <div class="cj-note">A lighter entry point before the full product.</div>
+          </div>
+          <div class="cj-card">
+            <div class="cj-item">Moves to the core checkout product</div>
+            <div class="cj-item">Patients guided through change</div>
+            <div class="cj-note">Phase 2 is the full Checkout product. where real volume and revenue growth begins.</div>
+          </div>
+          <div class="cj-card">
+            <div class="cj-item">Fill volume grows steadily</div>
+            <div class="cj-item">Turns on features like refills</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+
+  <!-- SEGMENTS -->
+  <div class="cs-section">
+    <p class="cs-section-label">Research design</p>
+    <h2 class="cs-section-title">Four segments, one complete picture</h2>
+    <p>We recruited across four distinct groups. including healthy pharmacies as a positive benchmark. Together they let us trace the full arc of the pharmacy experience and pinpoint where it diverged.</p>
+
+    <div class="segment-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="segment-card sage-top">
+        <div class="segment-label">Segment 01</div>
+        <div class="segment-title">Launched, healthy</div>
+        <div class="segment-desc">Pharmacies actively using the platform with a strong health score. Included as a positive benchmark to understand what good looks like.</div>
+      </div>
+      <div class="segment-card">
+        <div class="segment-label pink">Segment 02</div>
+        <div class="segment-title">Launched, unhealthy</div>
+        <div class="segment-desc">Pharmacies that went live within the last 3 months but have a low health score. Still active, but struggling to gain traction.</div>
+      </div>
+      <div class="segment-card sage-top">
+        <div class="segment-label">Segment 03</div>
+        <div class="segment-title">Launched, then churned</div>
+        <div class="segment-desc">Pharmacies that went live, used the platform for a period, and then disengaged or left entirely.</div>
+      </div>
+      <div class="segment-card sage-top">
+        <div class="segment-label">Segment 04</div>
+        <div class="segment-title">Churned pre-launch</div>
+        <div class="segment-desc">Pharmacies that signed on with Nimble but never went live. The hardest segment to reach and the most upstream failure point.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+
+  <!-- RESEARCH APPROACH -->
+  <div class="cs-section">
+    <p class="cs-section-label">Research approach</p>
+    <h2 class="cs-section-title">Following the pharmacy from first contact to outcome</h2>
+    <p>We recruited 12 pharmacies across four segments. Distribution was uneven by design. reaching pharmacies that churned pre-launch was significantly harder, as they had already disengaged from Nimble entirely.</p>
+
+    <div style="display: flex; flex-direction: column; margin-top: 1.5rem;">
+
+      <div style="display: grid; grid-template-columns: 3.5rem 1fr 2fr; gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid rgba(168,84,112,0.15); align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--sage); font-weight: 500;">01</span>
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--sage-light); border: 1px solid var(--sage); display: flex; align-items: center; justify-content: center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+        </div>
+        <div style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">Segment-based recruitment</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300;">12 pharmacies across 3 churn segments, recruited with CS team support. Uneven distribution due to difficulty reaching pre-launch churns.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 3.5rem 1fr 2fr; gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid rgba(168,84,112,0.15); align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--sage); font-weight: 500;">02</span>
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--sage-light); border: 1px solid var(--sage); display: flex; align-items: center; justify-content: center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+        </div>
+        <div style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">60-min in-depth interviews</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300;">Traced each pharmacy's full journey from sales outreach to their current outcome. Some sessions conducted on-site to observe the pharmacy environment and setup firsthand.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 3.5rem 1fr 2fr; gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid rgba(168,84,112,0.15); align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--sage); font-weight: 500;">03</span>
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--sage-light); border: 1px solid var(--sage); display: flex; align-items: center; justify-content: center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+        </div>
+        <div style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">Journey mapping & blueprinting</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300;">Overlaid segment journeys to identify shared pain points and internal process gaps.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 3.5rem 1fr 2fr; gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid rgba(168,84,112,0.15); border-bottom: 1px solid rgba(168,84,112,0.15); align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--sage); font-weight: 500;">04</span>
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--sage-light); border: 1px solid var(--sage); display: flex; align-items: center; justify-content: center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+        </div>
+        <div style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">Cross-functional readout</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300;">Presented to Sales, Onboarding, Product, and CS to align on shared accountability.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+
+  <!-- INSIGHTS -->
+  <div class="cs-section">
+    <p class="cs-section-label">Key insights</p>
+    <h2 class="cs-section-title">Three problems were driving pharmacies toward churn</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #fff; border: 1px solid rgba(168,84,112,0.15); border-top: 3px solid var(--accent); border-radius: 4px; padding: 1.5rem;">
+        <div style="font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.75rem;">Insight 01</div>
+        <div style="font-size: 0.92rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.35;">Integration is a challenge, but Phase 2 is where it hits hardest</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; font-weight: 300;">Phase 2 requires significantly more data going back and forth between the pharmacy system and Nimble. When the integration isn't seamless, that volume of exchange creates breakdowns that Phase 1 never exposed.</div>
+      </div>
+      <div style="background: #fff; border: 1px solid rgba(168,84,112,0.15); border-top: 3px solid var(--accent); border-radius: 4px; padding: 1.5rem;">
+        <div style="font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.75rem;">Insight 02</div>
+        <div style="font-size: 0.92rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.35;">Communication gaps eroded trust</div>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+          <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300; padding-left: 1rem; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent);">·</span>Bug reports went unanswered and CS had no visibility into what product was working on.
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300; padding-left: 1rem; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent);">·</span>Pharmacies felt ignored and eventually left.
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300; padding-left: 1rem; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent);">·</span>Revenue model was unclear post-launch — pharmacies didn't understand how patient usage translated to revenue.
+          </div>
+        </div>
+      </div>
+      <div style="background: #fff; border: 1px solid rgba(168,84,112,0.15); border-top: 3px solid var(--accent); border-radius: 4px; padding: 1.5rem;">
+        <div style="font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.75rem;">Insight 03</div>
+        <div style="font-size: 0.92rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.35;">Patient adoption stalled at phase transition</div>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+          <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300; padding-left: 1rem; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent);">·</span>Pharmacies lacked the time and resources to proactively raise patient awareness. Staff were sometimes undertrained on the new workflow.
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300; padding-left: 1rem; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent);">·</span>Patients received messages without any prior notice, making the outreach feel unexpected and confusing.
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300; padding-left: 1rem; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--accent);">·</span>Certain message language was vague and raised concerns, directly driving the spike in inbound calls to pharmacies.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Before journey map -->
+    <div style="margin-top: 2rem; overflow-x: auto;">
+      <div style="font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem;">Pharmacy lifecycle: before</div>
+      <style>
+        .bpb { font-family: 'Plus Jakarta Sans', sans-serif; min-width: 700px; }
+        .bpb .g7 { display: grid; grid-template-columns: 80px repeat(6, 1fr); gap: 0; }
+        .bpb .sl { text-align: center; padding: 10px 6px; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: #1E1118; border-right: 1px solid rgba(255,255,255,0.08); }
+        .bpb .sl.g { background: #366B58; }
+        .bpb .sl.p { background: #A85470; }
+        .bpb .sl.d { background: #2D1A22; }
+        .bpb .sl.e { background: transparent; border-right: 1px solid rgba(168,84,112,0.15); }
+        .bpb .ll { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: #A8899A; padding: 0 8px 0 0; display: flex; align-items: center; border-right: 1px solid rgba(168,84,112,0.15); }
+        .bpb .cc { padding: 8px 6px; border-right: 0.5px solid rgba(168,84,112,0.12); border-top: 0.5px solid rgba(168,84,112,0.12); display: flex; flex-direction: column; gap: 4px; }
+        .bpb .cc.hot { background: rgba(168,84,112,0.03); }
+        .bpb .cc.go { background: rgba(54,107,88,0.03); }
+        .bpb .cc.ch { background: rgba(45,26,34,0.03); }
+        .bpb .cc:last-child { border-right: none; }
+        .bpb .al { border-right: 1px solid rgba(168,84,112,0.15); font-size:10px; font-weight:500; text-transform:uppercase; letter-spacing:0.06em; color:#A8899A; padding: 0 8px 0 0; display:flex; align-items:center; }
+        .bpb .tg { border-radius: 3px; padding: 3px 7px; font-size: 10.5px; line-height: 1.4; }
+        .bpb .td { background: #F5F5F3; color: #4A4A4A; }
+        .bpb .tf { background: #FCEBEB; color: #791F1F; }
+        .bpb .tg2 { background: #EBF3EF; color: #1E3D2F; }
+        .bpb .tw { background: #FFF3E0; color: #7B4F00; }
+        .bpb .leg { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 1rem; font-size: 11px; color: #A8899A; padding-top: 1rem; border-top: 0.5px solid rgba(168,84,112,0.15); }
+        .bpb .li { display: flex; align-items: center; gap: 5px; }
+        .bpb .ld { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+      </style>
+      <div class="bpb">
+        <div class="g7">
+          <div class="sl e"></div>
+          <div class="sl">Sales</div>
+          <div class="sl g">Onboarding ★</div>
+          <div class="sl">Phase 1</div>
+          <div class="sl p">⚡ Phase 2</div>
+          <div class="sl">Settles down</div>
+          <div class="sl d">Churn risk</div>
+        </div>
+        <div class="g7">
+          <div class="al">Journey</div>
+          <div style="grid-column: span 6; background: #FAF6F8;">
+            <svg width="100%" viewBox="0 0 600 90" preserveAspectRatio="none" style="display:block; height:90px;">
+              <rect x="300" y="0" width="100" height="90" fill="rgba(168,84,112,0.07)"/>
+              <line x1="300" y1="0" x2="300" y2="90" stroke="#A85470" stroke-width="0.5" stroke-dasharray="3 3"/>
+              <line x1="400" y1="0" x2="400" y2="90" stroke="#A85470" stroke-width="0.5" stroke-dasharray="3 3"/>
+              <rect x="500" y="0" width="100" height="90" fill="rgba(45,26,34,0.05)"/>
+              <line x1="500" y1="0" x2="500" y2="90" stroke="rgba(45,26,34,0.2)" stroke-width="0.5" stroke-dasharray="3 3"/>
+              <line x1="100" y1="0" x2="100" y2="90" stroke="rgba(168,84,112,0.1)" stroke-width="0.5"/>
+              <line x1="200" y1="0" x2="200" y2="90" stroke="rgba(168,84,112,0.1)" stroke-width="0.5"/>
+              <path d="M50,30 C90,22 130,14 150,12 C170,10 210,16 250,26 C270,32 290,50 350,74 C375,82 400,68 450,60 C475,54 510,60 550,68 L550,90 L50,90 Z" fill="rgba(168,84,112,0.06)"/>
+              <path d="M50,30 C90,22 130,14 150,12 C170,10 210,16 250,26 C270,32 290,50 350,74 C375,82 400,68 450,60 C475,54 510,60 550,68" fill="none" stroke="#A85470" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="50"  cy="30" r="3" fill="#A85470"/>
+              <circle cx="150" cy="12" r="4" fill="#366B58"/>
+              <circle cx="250" cy="26" r="3" fill="#A85470"/>
+              <circle cx="350" cy="74" r="4.5" fill="#E24B4A"/>
+              <circle cx="450" cy="60" r="3" fill="#A85470"/>
+              <circle cx="550" cy="68" r="3" fill="#2D1A22"/>
+              <text x="50"  y="22"  text-anchor="middle" font-size="13">🙂</text>
+              <text x="150" y="4"   text-anchor="middle" font-size="15">😄</text>
+              <text x="250" y="18"  text-anchor="middle" font-size="13">😊</text>
+              <text x="350" y="60"  text-anchor="middle" font-size="17">😤</text>
+              <text x="450" y="48"  text-anchor="middle" font-size="13">😟</text>
+              <text x="550" y="56"  text-anchor="middle" font-size="13">😔</text>
+              <text x="50"  y="88" text-anchor="middle" font-size="8" fill="#A8899A">Hopeful</text>
+              <text x="150" y="88" text-anchor="middle" font-size="8" fill="#366B58" font-weight="500">Delighted</text>
+              <text x="250" y="88" text-anchor="middle" font-size="8" fill="#A8899A">Confident</text>
+              <text x="350" y="88" text-anchor="middle" font-size="8" fill="#A85470" font-weight="500">Overwhelmed</text>
+              <text x="450" y="88" text-anchor="middle" font-size="8" fill="#A8899A">Frustrated</text>
+              <text x="550" y="88" text-anchor="middle" font-size="8" fill="#2D1A22" font-weight="500">At risk</text>
+            </svg>
+          </div>
+        </div>
+        <div class="g7">
+          <div class="ll">Pharmacy</div>
+          <div class="cc"><div class="tg td">Signs agreement</div></div>
+          <div class="cc go"><div class="tg tg2">Smooth setup</div><div class="tg tg2">Great CS support</div></div>
+          <div class="cc"><div class="tg td">Building volume</div><div class="tg tf">Staff training gaps</div></div>
+          <div class="cc hot"><div class="tg tf">Phase 2 data exchange breaks down</div><div class="tg tf">Patients confused</div><div class="tg tf">Phone calls flood in</div></div>
+          <div class="cc"><div class="tg td">Calls die down</div><div class="tg td">Volume recovers slowly</div></div>
+          <div class="cc ch"><div class="tg tf">Bugs go unanswered</div><div class="tg tf">Revenue model unclear</div><div class="tg tw">Churns</div></div>
+        </div>
+        <div class="g7">
+          <div class="ll">Nimble CS</div>
+          <div class="cc"><div class="tg td">Account handoff</div></div>
+          <div class="cc go"><div class="tg tg2">Proactive onboarding</div><div class="tg tg2">Training & setup</div></div>
+          <div class="cc"><div class="tg td">Monitors health score</div></div>
+          <div class="cc hot"><div class="tg tf">High inbound calls</div><div class="tg tf">No PMS visibility</div></div>
+          <div class="cc"><div class="tg td">Volume normalises</div></div>
+          <div class="cc ch"><div class="tg tf">Can't triage bugs vs gaps</div><div class="tg tf">No triage visibility</div></div>
+        </div>
+        <div class="g7">
+          <div class="ll">Product</div>
+          <div class="cc"><div class="tg tf">No PMS restrictions</div></div>
+          <div class="cc go"><div class="tg td">Basic integration setup</div></div>
+          <div class="cc"><div class="tg td">Tracks Phase 1 metrics</div></div>
+          <div class="cc hot"><div class="tg tf">Integration failures</div><div class="tg tf">No transition comms</div></div>
+          <div class="cc"><div class="tg td">Monitors Phase 2</div></div>
+          <div class="cc ch"><div class="tg tf">No triage cadence</div><div class="tg tf">Bugs unresolved</div></div>
+        </div>
+        <div class="leg">
+          <div class="li"><div class="ld" style="background:#366B58;"></div> Positive moment</div>
+          <div class="li"><div class="ld" style="background:#E24B4A;"></div> Friction point</div>
+          <div class="li"><div class="ld" style="background:#BA7517;"></div> Churn risk</div>
+          <div class="li"><div class="ld" style="background:#F5F5F3; border:1px solid #ddd;"></div> Standard action</div>
+          <div class="li"><span style="color:#A85470; font-size:11px;">⚡</span> High friction zone</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="cs-divider" />
+
+  <!-- RECOMMENDATIONS -->
+  <div class="cs-section">
+    <p class="cs-section-label">What we changed</p>
+    <h2 class="cs-section-title">Each insight mapped to a cross-functional decision</h2>
+    <p>Findings were presented to leaders across Sales, Product, Onboarding, and Customer Success. All four changes were actioned from the research.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 1.5rem;">
+
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: #fff; border: 1px solid rgba(54,107,88,0.25); display: flex; align-items: center; justify-content: center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div>
+          <div style="font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.4rem;">Sales · Integration</div>
+          <div style="font-size: 1rem; font-weight: 500; color: var(--text-primary); line-height: 1.35; margin-bottom: 0.6rem;">Restrict sales to compatible pharmacy systems</div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; font-weight: 300;">Identified which pharmacy systems consistently produced poor integrations and built that into the sales qualification process, preventing a known source of early churn before it started.</div>
+        </div>
+      </div>
+
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: #fff; border: 1px solid rgba(54,107,88,0.25); display: flex; align-items: center; justify-content: center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.4 2 2 0 0 1 3.55 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+        </div>
+        <div>
+          <div style="font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.4rem;">Patient · Adoption</div>
+          <div style="font-size: 1rem; font-weight: 500; color: var(--text-primary); line-height: 1.35; margin-bottom: 0.6rem;">Deploy a patient education phase via text messaging</div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; font-weight: 300;">Introduced a dedicated patient education period triggered at the transitional phase where most confusion occurred. We used Nimble's existing text messaging infrastructure to guide patients through the change before they encountered friction.</div>
+        </div>
+      </div>
+
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: #fff; border: 1px solid rgba(54,107,88,0.25); display: flex; align-items: center; justify-content: center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <div style="font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.4rem;">Engineering · Integration</div>
+          <div style="font-size: 1rem; font-weight: 500; color: var(--text-primary); line-height: 1.35; margin-bottom: 0.6rem;">Invest in smoother integration infrastructure</div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; font-weight: 300;">Secured investment to build out more robust integrations for the pharmacy systems we do support, reducing the disruption that was undermining early adoption and eroding pharmacy confidence in the platform.</div>
+        </div>
+      </div>
+
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: #fff; border: 1px solid rgba(54,107,88,0.25); display: flex; align-items: center; justify-content: center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div>
+          <div style="font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.4rem;">Product · CS · Communications</div>
+          <div style="font-size: 1rem; font-weight: 500; color: var(--text-primary); line-height: 1.35; margin-bottom: 0.6rem;">Establish SLAs for bugs and enhancement requests</div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; font-weight: 300;">Built out clear service level agreements. Product committed to reviewing and triaging all incoming requests on a defined timeline, and CS developed criteria to distinguish bugs from knowledge gaps, reducing unnecessary escalations and giving pharmacies visible acknowledgment that their feedback was being acted on.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+
+  <!-- SERVICE BLUEPRINT -->
+  <div class="cs-section">
+    <p class="cs-section-label">Service blueprint</p>
+    <h2 class="cs-section-title">The pharmacy lifecycle after changes</h2>
+    <p>How the full pharmacy experience looks with all four research-driven changes applied, from sales qualification through to a retained, active pharmacy.</p>
+
+    <div style="margin-top: 2rem; overflow-x: auto;">
+      <style>
+        .bp-s { font-family: 'Plus Jakarta Sans', sans-serif; padding: 0.5rem 0; min-width: 700px; }
+        .bp-s .sec-title { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
+        .bp-s .sec-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .bp-s .g7 { display: grid; grid-template-columns: 80px repeat(6, 1fr); gap: 0; }
+        .bp-s .sl { text-align: center; padding: 10px 6px; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: #1E1118; border-right: 1px solid rgba(255,255,255,0.08); }
+        .bp-s .sl.g { background: #366B58; }
+        .bp-s .sl.p { background: #A85470; }
+        .bp-s .sl.d { background: #2D1A22; }
+        .bp-s .sl.e { background: transparent; border-right: 1px solid rgba(168,84,112,0.15); }
+        .bp-s .ll { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: #A8899A; padding: 0 8px 0 0; display: flex; align-items: center; border-right: 1px solid rgba(168,84,112,0.15); }
+        .bp-s .cc { padding: 8px 6px; border-right: 0.5px solid rgba(168,84,112,0.12); border-top: 0.5px solid rgba(168,84,112,0.12); display: flex; flex-direction: column; gap: 4px; }
+        .bp-s .cc.hot { background: rgba(168,84,112,0.03); }
+        .bp-s .cc.go { background: rgba(54,107,88,0.03); }
+        .bp-s .cc.ch { background: rgba(45,26,34,0.03); }
+        .bp-s .cc.im { background: rgba(54,107,88,0.03); }
+        .bp-s .cc:last-child { border-right: none; }
+        .bp-s .al { border-right: 1px solid rgba(168,84,112,0.15); font-size:10px; font-weight:500; text-transform:uppercase; letter-spacing:0.06em; color:#A8899A; padding: 0 8px 0 0; display:flex; align-items:center; }
+        .bp-s .tg { border-radius: 3px; padding: 3px 7px; font-size: 10.5px; line-height: 1.4; }
+        .bp-s .td { background: #F5F5F3; color: #4A4A4A; }
+        .bp-s .tf { background: #FCEBEB; color: #791F1F; }
+        .bp-s .tc { background: #EBF3EF; color: #1E3D2F; }
+        .bp-s .tg2 { background: #EBF3EF; color: #1E3D2F; }
+        .bp-s .tw { background: #FFF3E0; color: #7B4F00; }
+        .bp-s .div { height: 1.5rem; }
+        .bp-s .leg { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 1.5rem; font-size: 11px; color: #A8899A; padding-top: 1rem; border-top: 0.5px solid rgba(168,84,112,0.15); }
+        .bp-s .li { display: flex; align-items: center; gap: 5px; }
+        .bp-s .ld { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+      </style>
+
+      <div class="bp-s">
+
+        <!-- AFTER -->
+
+        <div class="g7">
+          <div class="sl e"></div>
+          <div class="sl g">Sales ✓</div>
+          <div class="sl g">Onboarding ★</div>
+          <div class="sl">Phase 1</div>
+          <div class="sl" style="background:#7A9E8E;">Phase 2</div>
+          <div class="sl g">Settles down</div>
+          <div class="sl g">Retained ✓</div>
+        </div>
+
+        <div class="g7">
+          <div class="al">Journey</div>
+          <div style="grid-column: span 6; background: #F4FAF7;">
+            <svg width="100%" viewBox="0 0 600 90" preserveAspectRatio="none" style="display:block; height:90px;">
+              <line x1="100" y1="0" x2="100" y2="90" stroke="rgba(54,107,88,0.15)" stroke-width="0.5"/>
+              <line x1="200" y1="0" x2="200" y2="90" stroke="rgba(54,107,88,0.15)" stroke-width="0.5"/>
+              <line x1="300" y1="0" x2="300" y2="90" stroke="rgba(54,107,88,0.15)" stroke-width="0.5"/>
+              <line x1="400" y1="0" x2="400" y2="90" stroke="rgba(54,107,88,0.15)" stroke-width="0.5"/>
+              <line x1="500" y1="0" x2="500" y2="90" stroke="rgba(54,107,88,0.15)" stroke-width="0.5"/>
+              <path d="M50,30 C90,22 130,14 150,12 C170,10 210,16 250,26 C270,32 290,42 350,54 C375,58 400,46 450,36 C475,30 510,26 550,22 L550,90 L50,90 Z" fill="rgba(54,107,88,0.07)"/>
+              <path d="M50,30 C90,22 130,14 150,12 C170,10 210,16 250,26 C270,32 290,42 350,54 C375,58 400,46 450,36 C475,30 510,26 550,22" fill="none" stroke="#366B58" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="50"  cy="30" r="3" fill="#366B58"/>
+              <circle cx="150" cy="12" r="4" fill="#366B58"/>
+              <circle cx="250" cy="26" r="3" fill="#366B58"/>
+              <circle cx="350" cy="54" r="3.5" fill="#7A9E8E"/>
+              <circle cx="450" cy="36" r="3" fill="#366B58"/>
+              <circle cx="550" cy="22" r="3" fill="#366B58"/>
+              <text x="50"  y="22"  text-anchor="middle" font-size="13">🙂</text>
+              <text x="150" y="4"   text-anchor="middle" font-size="15">😄</text>
+              <text x="250" y="18"  text-anchor="middle" font-size="13">😊</text>
+              <text x="350" y="42"  text-anchor="middle" font-size="14">😬</text>
+              <text x="450" y="24"  text-anchor="middle" font-size="13">😊</text>
+              <text x="550" y="10"  text-anchor="middle" font-size="13">😌</text>
+              <text x="50"  y="88" text-anchor="middle" font-size="8" fill="#A8899A">Hopeful</text>
+              <text x="150" y="88" text-anchor="middle" font-size="8" fill="#366B58" font-weight="500">Delighted</text>
+              <text x="250" y="88" text-anchor="middle" font-size="8" fill="#A8899A">Confident</text>
+              <text x="350" y="88" text-anchor="middle" font-size="8" fill="#7A9E8E" font-weight="500">Some friction</text>
+              <text x="450" y="88" text-anchor="middle" font-size="8" fill="#366B58" font-weight="500">Recovering</text>
+              <text x="550" y="88" text-anchor="middle" font-size="8" fill="#366B58" font-weight="500">Confident</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="g7">
+          <div class="ll">Pharmacy</div>
+          <div class="cc im"><div class="tg td">Signs agreement</div></div>
+          <div class="cc go"><div class="tg tg2">Smooth setup</div><div class="tg tg2">Great CS support</div></div>
+          <div class="cc im"><div class="tg td">Building volume</div><div class="tg tc">Improved staff training</div></div>
+          <div class="cc im"><div class="tg tc">Compatible PMS only</div><div class="tg tc">Patient SMS education</div><div class="tg tc">Fewer integration issues</div></div>
+          <div class="cc go"><div class="tg tg2">Calls die down faster</div><div class="tg tg2">Volume recovers strongly</div></div>
+          <div class="cc go"><div class="tg tc">SLAs for bugs in place</div><div class="tg tc">Revenue model explained</div><div class="tg tg2">Pharmacy stays active</div></div>
+        </div>
+
+        <div class="g7">
+          <div class="ll">Nimble CS</div>
+          <div class="cc"><div class="tg td">Account handoff</div></div>
+          <div class="cc go"><div class="tg tg2">Proactive onboarding</div><div class="tg tg2">Training & setup</div></div>
+          <div class="cc"><div class="tg td">Monitors health score</div></div>
+          <div class="cc im"><div class="tg tc">SMS education deployed</div><div class="tg tg2">Reduced inbound volume</div></div>
+          <div class="cc go"><div class="tg tg2">Faster normalisation</div></div>
+          <div class="cc go"><div class="tg tc">Bug vs gap criteria clear</div><div class="tg tc">Visibility into product queue</div></div>
+        </div>
+
+        <div class="g7">
+          <div class="ll">Product</div>
+          <div class="cc im"><div class="tg tc">Restricts bad PMS sales</div></div>
+          <div class="cc go"><div class="tg tc">Integration infra investment</div></div>
+          <div class="cc"><div class="tg td">Tracks Phase 1 metrics</div></div>
+          <div class="cc im"><div class="tg tc">Clearer transition comms</div><div class="tg tg2">Fewer integration failures</div></div>
+          <div class="cc"><div class="tg td">Monitors Phase 2</div></div>
+          <div class="cc go"><div class="tg tc">SLA triage cadence live</div><div class="tg tg2">Bugs actioned on schedule</div></div>
+        </div>
+
+        <div class="leg">
+          <div class="li"><div class="ld" style="background:#366B58;"></div> Positive / improved</div>
+          <div class="li"><div class="ld" style="background:#EBF3EF; border:1px solid #366B58;"></div> Change implemented</div>
+          <div class="li"><div class="ld" style="background:#E24B4A;"></div> Friction point</div>
+          <div class="li"><div class="ld" style="background:#BA7517;"></div> Churn risk</div>
+          <div class="li"><div class="ld" style="background:#F5F5F3; border:1px solid #ddd;"></div> Unchanged</div>
+          <div class="li"><span style="color:#A85470; font-size:11px;">⚡</span> High friction zone</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+  <div class="cs-section">
+    <p class="cs-section-label">Impact</p>
+    <h2 class="cs-section-title">Cross-functional problems surfaced, aligned, and acted on</h2>
+    <p>The research didn't just identify friction. it created a shared language for problems that had been siloed across teams. Getting leadership aligned on the same picture was the first and most important outcome.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--accent); line-height: 1; margin-bottom: 0.5rem;">48h</div>
+        <div style="font-size: 0.82rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.25rem;">Bug resolution + SLAs</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 300; line-height: 1.6;">Down from weeks. Clear SOPs established for Product, CS, and Sales so every request is owned and tracked.</div>
+      </div>
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--accent); line-height: 1; margin-bottom: 0.5rem;">+20</div>
+        <div style="font-size: 0.82rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.25rem;">NPS improvement</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 300; line-height: 1.6;">Pharmacy NPS improved by 20+ points following changes to communications and bug resolution.</div>
+      </div>
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem;">
+        <div style="margin-bottom: 0.5rem;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A85470" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.55 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l1.05-1.05a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+        </div>
+        <div style="font-size: 0.82rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.25rem;">Patient confusion inbounds</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 300; line-height: 1.6;">A warm transition phase focused on education measurably reduced patient confusion calls during phase transition.</div>
+      </div>
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--accent); line-height: 1; margin-bottom: 0.5rem;">↓</div>
+        <div style="font-size: 0.82rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.25rem;">Integration-related churn</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 300; line-height: 1.6;">Restricting sales to compatible pharmacy systems reduced churn from poor integrations.</div>
+      </div>
+    </div>
+
+    <div style="background: #EBF3EF; border-radius: 4px; padding: 1.25rem 1.5rem;">
+      <div style="font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.5rem;">A note on process</div>
+      <div style="font-size: 0.97rem; color: #1E3D2F; font-weight: 300; line-height: 1.7;">These improvements are meaningful, but they are the beginning of a longer journey. Fixing deep integration infrastructure takes time and continued investment. What this research enabled was prioritizing the actions with the most immediate customer impact first: clearer communication, faster bug resolution, and better patient onboarding.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="cs-footer">
+  <span class="cs-footer-text">Tien Do · UX Research Portfolio</span>
+  <a href="index.html#work">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to all case studies
+  </a>
+</div>
+
+</body>
+</html>

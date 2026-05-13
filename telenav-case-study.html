@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In-Car Commerce · Tien Do</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #FFFFFF;
+    --sand: #F9F0F2;
+    --terracotta: #A85470;
+    --deep: #2D1A22;
+    --text-primary: #1E1118;
+    --text-secondary: #6B4F5A;
+    --text-muted: #A8899A;
+    --accent: #A85470;
+    --accent-light: #FAEDF1;
+    --sage: #366B58;
+    --sage-light: #EBF3EF;
+    --border: rgba(168, 84, 112, 0.12);
+    --border-strong: rgba(168, 84, 112, 0.28);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #FFFFFF;
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: #ffffff;
+    padding: 0 4rem;
+    height: 76px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .nav-logo {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--sage);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo span {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-back {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+  }
+
+  .nav-back:hover { color: var(--text-primary); }
+  .nav-back svg { width: 15px; height: 15px; }
+
+  /* HERO */
+  .cs-hero {
+    margin-top: 76px;
+    background: var(--sand);
+    padding: 3.5rem 5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cs-hero-content {
+    max-width: 760px;
+    padding-bottom: 2.5rem;
+  }
+
+  .cs-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .cs-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .cs-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* META BAR */
+  .cs-meta-bar {
+    padding: 1.75rem 0;
+    border-top: 2px solid var(--text-primary);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .meta-item { padding-right: 2rem; }
+  .meta-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.35rem;
+  }
+  .meta-value {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* BODY */
+  .cs-body {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .cs-section { margin-bottom: 4rem; }
+
+  .cs-section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+
+  .cs-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+
+  .cs-body p {
+    font-size: 0.97rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  .cs-body p:last-child { margin-bottom: 0; }
+  .cs-body strong { color: var(--text-primary); font-weight: 500; }
+
+  .cs-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+
+  /* FOOTER */
+  .cs-footer {
+    background: var(--sand);
+    border-top: 1px solid var(--border);
+    padding: 2rem 5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  .cs-footer-text {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+
+  .cs-footer a {
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+
+  .cs-footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 760px) {
+    nav { padding: 0 1.5rem; }
+    .cs-hero { padding: 2.5rem 1.5rem 0; }
+    .cs-meta-bar { grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 1.5rem 0; }
+    .cs-body { padding: 2.5rem 1.5rem; }
+    .cs-footer { padding: 1.5rem; flex-direction: column; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo"><span>TD</span></a>
+  <a href="index.html#work" class="nav-back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to portfolio
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="cs-hero">
+  <div class="cs-hero-content">
+    <p class="cs-eyebrow">Telenav · Lead UX Researcher · 2020</p>
+    <h1 class="cs-title">Building a voice-based ordering experience that's safe to use while driving</h1>
+    <p class="cs-subtitle">A discovery and evaluative research project to define user requirements and test a new conversational UI for Telenav's In-Car Commerce OEM product.</p>
+  </div>
+  <div style="padding: 1.25rem 0; display: flex; gap: 2rem; align-items: center; border-top: 2px solid var(--text-primary); flex-wrap: nowrap;">
+    <div style="display: flex; gap: 0.4rem; align-items: baseline; white-space: nowrap;">
+      <span style="font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage);">Role</span>
+      <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 500;">Lead UX Researcher</span>
+    </div>
+    <div style="width: 1px; height: 12px; background: var(--border-strong); flex-shrink: 0;"></div>
+    <div style="display: flex; gap: 0.4rem; align-items: baseline; white-space: nowrap;">
+      <span style="font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage);">Methods</span>
+      <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 500;">Interviews · Surveys · Wizard of Oz · Personas</span>
+    </div>
+    <div style="width: 1px; height: 12px; background: var(--border-strong); flex-shrink: 0;"></div>
+    <div style="display: flex; gap: 0.4rem; align-items: baseline; white-space: nowrap;">
+      <span style="font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage);">Timeline</span>
+      <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 500;">2020</span>
+    </div>
+    <div style="width: 1px; height: 12px; background: var(--border-strong); flex-shrink: 0;"></div>
+    <div style="display: flex; gap: 0.4rem; align-items: baseline; white-space: nowrap;">
+      <span style="font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage);">Platform</span>
+      <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 500;">In-car voice UI (OEM)</span>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY STRIP -->
+<div style="border: 1px solid rgba(168,84,112,0.2); border-left: none; border-right: none;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; max-width: 100%;">
+    <div style="padding: 2rem 5rem; border-right: 1px solid rgba(168,84,112,0.15);">
+      <div style="font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); font-weight: 500; margin-bottom: 0.5rem;">The problem</div>
+      <div style="font-size: 0.88rem; color: #1E1118; line-height: 1.7; font-weight: 300;">How do you build a voice ordering system that's safe, intuitive, and usable while driving?</div>
+    </div>
+    <div style="padding: 2rem 5rem;">
+      <div style="font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); font-weight: 500; margin-bottom: 0.5rem;">The outcome</div>
+      <div style="font-size: 0.88rem; color: #1E1118; line-height: 1.7; font-weight: 300; margin-bottom: 0.75rem;">Insights informed design changes and established a new approved remote testing protocol for voice products at Telenav.</div>
+      <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+        <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: #A85470; line-height: 1;">6</span>
+          <span style="font-size: 0.78rem; color: #6B4F5A;">usability sessions</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: #A85470; line-height: 1;">3</span>
+          <span style="font-size: 0.78rem; color: #6B4F5A;">key insights</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: #A85470; line-height: 1;">✓</span>
+          <span style="font-size: 0.78rem; color: #6B4F5A;">protocol approved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="cs-body">
+
+  <!-- BACKGROUND -->
+  <div class="cs-section">
+    <p class="cs-section-label">Background</p>
+    <h2 class="cs-section-title">Voice ordering in the car is a hard problem.</h2>
+    <p>Telenav was building a voice-based ordering system for OEM clients — letting drivers order food, coffee, and parking without looking away from the road. The challenge was designing an experience that was safe and low cognitive load, while COVID made in-person testing impossible.</p>
+
+    <div style="background: #F9F0F2; border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; padding: 1.25rem 1.75rem; margin: 1.5rem 0;">
+      <p style="font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin: 0 0 0.4rem;">Research question</p>
+      <p style="font-size: 1rem; font-weight: 500; color: var(--text-primary); line-height: 1.6; margin: 0;">How can we build a voice-based ordering system that is safe and easy to use while driving?</p>
+    </div>
+
+    <div style="margin-top: 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border);">
+      <img src="telenav-product.png" alt="Telenav In-Car Commerce product screens showing store selection, menu browsing, and payment" style="width: 100%; display: block;" />
+      <div style="padding: 0.75rem 1rem; background: #F9F0F2; border-top: 1px solid var(--border);">
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; font-weight: 300;">The Telenav In-Car Commerce interface — store selection, menu browsing, and one-tap payment, all designed for a driving context.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+
+  <!-- APPROACH -->
+  <div class="cs-section">
+    <p class="cs-section-label">Research approach</p>
+    <h2 class="cs-section-title">Discovery first, then evaluation</h2>
+    <p>Two phases: understand who the users are and what they need, then test early designs for safety and usability.</p>
+
+    <div style="display: flex; flex-direction: column; margin-top: 1.5rem;">
+
+      <div style="display: grid; grid-template-columns: 3.5rem 1fr 2fr; gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid rgba(168,84,112,0.15); align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--sage); font-weight: 500;">01</span>
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--sage-light); border: 1px solid var(--sage); display: flex; align-items: center; justify-content: center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+        </div>
+        <div style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">User interviews & persona creation</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300;">Interviewed OEM drivers who frequently order while driving. Synthesized findings into personas to guide design direction.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 3.5rem 1fr 2fr; gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid rgba(168,84,112,0.15); align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--sage); font-weight: 500;">02</span>
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--sage-light); border: 1px solid var(--sage); display: flex; align-items: center; justify-content: center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+        </div>
+        <div style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">Literature review</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300;">Reviewed research on voice testing, cognitive load, and conversational UI to build a heuristics framework for evaluation.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 3.5rem 1fr 2fr; gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid rgba(168,84,112,0.15); align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--sage); font-weight: 500;">03</span>
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--sage-light); border: 1px solid var(--sage); display: flex; align-items: center; justify-content: center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </div>
+        </div>
+        <div style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">Survey (N=100)</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300;">Captured voice assistant usage patterns and collected natural language phrase samples to train the voice engine on command variants.</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 3.5rem 1fr 2fr; gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid rgba(168,84,112,0.15); border-bottom: 1px solid rgba(168,84,112,0.15); align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 0.72rem; color: var(--sage); font-weight: 500;">04</span>
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--sage-light); border: 1px solid var(--sage); display: flex; align-items: center; justify-content: center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </div>
+        </div>
+        <div style="font-size: 0.9rem; font-weight: 500; color: var(--text-primary);">Remote Wizard of Oz usability testing</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 300;">Designed and ran a new remote WoZ protocol using Zoom and Adobe XD. 6 sessions with real users testing voice ordering tasks and conversation flows.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+
+  <!-- WOZ DIAGRAM -->
+  <div class="cs-section">
+    <p class="cs-section-label">Testing protocol</p>
+    <h2 class="cs-section-title">A new way to test voice remotely</h2>
+    <p>With in-person testing off the table, I designed a remote Wizard of Oz protocol that let us simulate a voice experience over Zoom. The researcher controls the prototype responses in real time while the participant speaks naturally, creating the illusion of a live voice system.</p>
+
+    <div style="margin-top: 1.75rem; overflow-x: auto;">
+      <style>
+        .woz { font-family: 'Plus Jakarta Sans', sans-serif; min-width: 560px; }
+        .woz-row { display: flex; align-items: center; gap: 0; margin-bottom: 0; }
+        .woz-node { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; }
+        .woz-circle { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .woz-circle svg { width: 20px; height: 20px; }
+        .woz-label { font-size: 11px; font-weight: 500; color: #1E1118; text-align: center; line-height: 1.35; max-width: 90px; }
+        .woz-sub { font-size: 10px; color: #A8899A; text-align: center; line-height: 1.4; max-width: 90px; }
+        .woz-arrow { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; padding-bottom: 28px; }
+        .woz-arrow svg { width: 24px; height: 16px; }
+        .woz-details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 1.25rem; }
+        .woz-card { background: #F4FAF7; border: 0.5px solid #EBF3EF; border-radius: 6px; padding: 10px 12px; }
+        .woz-card-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: #366B58; margin-bottom: 4px; font-weight: 500; }
+        .woz-card-text { font-size: 11px; color: #2D4A3E; line-height: 1.5; font-weight: 300; }
+      </style>
+
+      <div class="woz">
+        <div class="woz-row">
+          <div class="woz-node">
+            <div class="woz-circle" style="background: #F9F0F2; border: 1.5px solid #A85470;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#A85470" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="woz-label">Participant</div>
+            <div class="woz-sub">Speaks naturally via Zoom</div>
+          </div>
+          <div class="woz-arrow">
+            <svg viewBox="0 0 24 16" fill="none"><path d="M2 8h18M14 2l6 6-6 6" stroke="#A8899A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="woz-node">
+            <div class="woz-circle" style="background: #EBF3EF; border: 1.5px solid #366B58;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#366B58" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="woz-label">Screen share</div>
+            <div class="woz-sub">Prototype visible to participant</div>
+          </div>
+          <div class="woz-arrow">
+            <svg viewBox="0 0 24 16" fill="none"><path d="M2 8h18M14 2l6 6-6 6" stroke="#A8899A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="woz-node">
+            <div class="woz-circle" style="background: #F9F0F2; border: 1.5px solid #A85470;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#A85470" stroke-width="1.8"><rect x="1" y="5" width="22" height="14" rx="2"/><polyline points="1 10 12 10 23 10"/></svg>
+            </div>
+            <div class="woz-label">Researcher keyboard</div>
+            <div class="woz-sub">Controls prototype responses in real time</div>
+          </div>
+          <div class="woz-arrow">
+            <svg viewBox="0 0 24 16" fill="none"><path d="M2 8h18M14 2l6 6-6 6" stroke="#A8899A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="woz-node">
+            <div class="woz-circle" style="background: #EBF3EF; border: 1.5px solid #366B58;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#366B58" stroke-width="1.8"><path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <div class="woz-label">Adobe XD prototype</div>
+            <div class="woz-sub">Simulates live voice responses</div>
+          </div>
+        </div>
+
+        <div class="woz-details">
+          <div class="woz-card">
+            <div class="woz-card-label">Tool</div>
+            <div class="woz-card-text">Zoom for remote session, screen sharing, and recording</div>
+          </div>
+          <div class="woz-card">
+            <div class="woz-card-label">Prototype</div>
+            <div class="woz-card-text">Adobe XD conversational flow, keyboard-controlled by researcher</div>
+          </div>
+          <div class="woz-card">
+            <div class="woz-card-label">Sessions</div>
+            <div class="woz-card-text">6 remote sessions with real OEM users</div>
+          </div>
+          <div class="woz-card">
+            <div class="woz-card-label">Outcome</div>
+            <div class="woz-card-text">Protocol approved for future voice testing at Telenav</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+  <div class="cs-section">
+    <p class="cs-section-label">Key insights</p>
+    <h2 class="cs-section-title">Three usability problems emerged consistently</h2>
+    <p style="font-size: 0.82rem; color: var(--text-muted); font-style: italic;">Due to NDA restrictions, specifics are redacted. These are high-level findings.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #fff; border: 1px solid rgba(168,84,112,0.15); border-top: 3px solid var(--accent); border-radius: 4px; padding: 1.5rem;">
+        <div style="font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.75rem;">Insight 01</div>
+        <div style="font-size: 0.92rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.35;">Users forget what they ordered</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; font-weight: 300;">A voice-only order summary increases cognitive load. Users need a quick visual reference to recall items without being distracted from the road.</div>
+      </div>
+      <div style="background: #fff; border: 1px solid rgba(168,84,112,0.15); border-top: 3px solid var(--accent); border-radius: 4px; padding: 1.5rem;">
+        <div style="font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.75rem;">Insight 02</div>
+        <div style="font-size: 0.92rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.35;">Visual system status cues don't work while driving</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; font-weight: 300;">Users can't look at the screen to know when the system is listening. Without clear audio cues, they talk over the system or miss their window to speak.</div>
+      </div>
+      <div style="background: #fff; border: 1px solid rgba(168,84,112,0.15); border-top: 3px solid var(--accent); border-radius: 4px; padding: 1.5rem;">
+        <div style="font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.75rem;">Insight 03</div>
+        <div style="font-size: 0.92rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.35;">Unfamiliar menus make voice ordering unusable</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; font-weight: 300;">A heavily voice-driven UI assumes users know the menu. For infrequent customers, not knowing item names makes the system impossible to use without visual support.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="cs-divider" />
+
+  <!-- IMPACT -->
+  <div class="cs-section">
+    <p class="cs-section-label">Impact</p>
+    <h2 class="cs-section-title">Research informed design and unlocked a new testing approach</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0;">
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: var(--accent); line-height: 1; margin-bottom: 0.5rem;">New protocol</div>
+        <div style="font-size: 0.82rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.25rem;">Remote Wizard of Oz testing approved</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 300; line-height: 1.6;">The remote testing protocol developed for this study was formally approved, enabling lean iterative voice testing for future conversational flow work.</div>
+      </div>
+      <div style="background: #F9F0F2; border-radius: 8px; padding: 1.5rem;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: var(--accent); line-height: 1; margin-bottom: 0.5rem;">Design changes</div>
+        <div style="font-size: 0.82rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.25rem;">Findings directly informed the next design sprint</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 300; line-height: 1.6;">Insights on cognitive load, audio cues, and menu familiarity shaped changes to the conversation flow and visual display strategy.</div>
+      </div>
+    </div>
+
+    <div style="background: #EBF3EF; border-radius: 4px; padding: 1.25rem 1.5rem; margin-top: 0.5rem;">
+      <div style="font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.5rem;">A note</div>
+      <div style="font-size: 0.85rem; color: #1E3D2F; font-weight: 300; line-height: 1.7;">I left Telenav before the product reached full build-out. The work captured here reflects the research phase and its direct outputs. Future planned work included driving usability testing and distraction and cognitive load assessment using NHTSA recommended methods.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="cs-footer">
+  <span class="cs-footer-text">Tien Do · UX Research Portfolio</span>
+  <a href="index.html#work">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to all case studies
+  </a>
+</div>
+
+</body>
+</html>
