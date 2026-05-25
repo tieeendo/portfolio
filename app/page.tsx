@@ -16,9 +16,9 @@ export default function Home() {
         <div className="hero-text">
           <h1 className="hero-name">Hi, my name is Tien.</h1>
           <div className="hero-bio">
-            <p>I&apos;m a UX researcher with 7+ years of experience turning ambiguous problems into clear, actionable insights. From founding researcher at a healthcare startup to leading infotainment research at a major automotive tech company.</p>
-            <p>M.S. in Human-Centered Design &amp; Engineering from the University of Washington. I believe good research starts with curiosity about people, not just their behavior.</p>
-            <p><a href="mailto:tieeen.do@gmail.com">tieeen.do@gmail.com</a></p>
+            <p>I&apos;m a UX researcher with 7+ years of experience turning ambiguous problems into clear, actionable insights. From founding researcher at a healthcare startup to leading infotainment research at a major automotive tech company. What I love most is how curiosity translates across industries. Every new domain is a chance to learn something, and that&apos;s what makes research endlessly exciting.</p>
+            <p>Based in Seattle, where I live with two cats who are sassy, naughty, and completely run the household: a tuxedo 🐈‍⬛ and an orange menace 🐈.</p>
+            <p>Contact me @ <a href="mailto:tieeen.do@gmail.com">tieeen.do@gmail.com</a></p>
           </div>
           <div className="hero-cta">
             <a href="/Tien-Do-Resume-2026.pdf" download className="btn-outline">Download resume</a>
