@@ -18,9 +18,9 @@ export default function Home() {
           <div className="hero-bio">
             <p>I&apos;m a UX researcher with 7+ years of experience turning ambiguous problems into clear, actionable insights. From founding researcher at a healthcare startup to leading infotainment research at a major automotive tech company.</p>
             <p>M.S. in Human-Centered Design &amp; Engineering from the University of Washington. I believe good research starts with curiosity about people, not just their behavior.</p>
+            <p><a href="mailto:tieeen.do@gmail.com">tieeen.do@gmail.com</a></p>
           </div>
           <div className="hero-cta">
-            <a href="#work" className="btn-primary">View case studies</a>
             <a href="/Tien-Do-Resume-2026.pdf" download className="btn-outline">Download resume</a>
           </div>
         </div>
@@ -214,22 +214,6 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="resume-section">
-              <div className="resume-section-title">Contact</div>
-              <div className="edu-item">
-                <div className="edu-degree">tieeen.do@gmail.com</div>
-                <div className="edu-school">Seattle, WA</div>
-              </div>
-            </div>
-
-            <a href="#" className="download-resume">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              Download full resume
-            </a>
           </div>
         </div>
       </section>
