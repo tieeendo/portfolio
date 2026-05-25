@@ -172,6 +172,7 @@ export default function Home() {
                 </div>
                 <ul className="exp-bullets">
                   <li>Led generative and evaluative research for in-car commerce and infotainment products across mobile, voice, and Human-Machine Interface (HMI) platforms.</li>
+                  <li>Conducted usability and compliance testing for HMI interfaces to meet European automotive safety standards, including MirrorLink certification requirements.</li>
                   <li>Improved usability and NPS through iterative testing for OEM infotainment, achieving System Usability Scale (SUS) above 80 and NPS above 30.</li>
                 </ul>
 
