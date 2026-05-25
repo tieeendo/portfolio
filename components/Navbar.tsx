@@ -13,7 +13,6 @@ export default function Navbar({ variant = 'home', backHref = '/#work' }: Navbar
         <ul className="nav-links">
           <li><a href="#work">Work</a></li>
           <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       ) : (
         <Link href={backHref} className="nav-back">

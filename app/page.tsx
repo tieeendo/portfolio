@@ -21,7 +21,7 @@ export default function Home() {
           </div>
           <div className="hero-cta">
             <a href="#work" className="btn-primary">View case studies</a>
-            <a href="#resume" className="btn-outline">Download resume</a>
+            <a href="/Tien-Do-Resume-2026.pdf" download className="btn-outline">Download resume</a>
           </div>
         </div>
         <div className="hero-visual">
