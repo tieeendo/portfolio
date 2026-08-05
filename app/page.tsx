@@ -54,6 +54,16 @@ export default function Home() {
                 <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#366B58', flexShrink: 0 }}></span>Seattle-based
               </div>
             </div>
+
+            {/* Floating cat photos */}
+            <div style={{ position: 'absolute', bottom: '-6%', left: '2%', animation: 'float3 3.8s ease-in-out infinite', zIndex: 2 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/cat-tuxedo.jpg" alt="My tuxedo cat" style={{ width: '82px', height: '82px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #fff', boxShadow: '0 4px 16px rgba(45,26,34,0.18)', display: 'block' }} />
+            </div>
+            <div style={{ position: 'absolute', bottom: '-20%', right: '-6%', animation: 'float1 4.5s ease-in-out infinite', animationDelay: '0.5s', zIndex: 2 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/cat-orange.jpg" alt="My orange cat" style={{ width: '82px', height: '82px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #fff', boxShadow: '0 4px 16px rgba(45,26,34,0.18)', display: 'block' }} />
+            </div>
           </div>
         </div>
       </section>
