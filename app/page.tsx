@@ -16,7 +16,7 @@ export default function Home() {
         <div className="hero-text">
           <h1 className="hero-name">Hi, my name is Tien.</h1>
           <div className="hero-bio">
-            <p>I&apos;m a UX researcher with 7+ years of experience turning ambiguous problems into clear, actionable insights. From founding researcher at a healthcare startup to leading infotainment research at a major automotive tech company. What I love most is how curiosity translates across industries. Every new domain is a chance to learn something, and that&apos;s what makes research endlessly exciting.</p>
+            <p>I&apos;m a UX researcher with 8+ years of experience turning ambiguous problems into clear, actionable insights. I&apos;ve worked in a mixture of industries from education to healthcare. What I love most is how curiosity translates across industries.</p>
             <p>Based in Seattle, where I live with two cats who are sassy, naughty, and completely run the household: a tuxedo 🐈‍⬛ and an orange menace 🐈.</p>
             <p><strong>Contact me</strong><br /><a href="mailto:tieeen.do@gmail.com">tieeen.do@gmail.com</a> · <a href="https://www.linkedin.com/in/tien-do/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
           </div>
@@ -62,7 +62,6 @@ export default function Home() {
       <section id="work">
         <p className="section-label">Selected work</p>
         <h2 className="section-title">Research that moved the needle</h2>
-        <p className="section-subtitle">A selection of studies spanning enterprise SaaS and consumer products, each grounded in real user needs and tied to business outcomes.</p>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', marginTop: '1rem' }}>
 
@@ -130,7 +129,7 @@ export default function Home() {
       <section id="resume">
         <p className="section-label">Experience</p>
         <h2 className="section-title">Resume</h2>
-        <p className="section-subtitle">7+ years of UX research across consumer mobile, pharmacy tech, and automotive. From founding researcher to senior IC.</p>
+        <p className="section-subtitle">8+ years of UX research across B2B and B2C products in consumer mobile, pharmacy tech, automotive, and education.</p>
 
         <div className="resume-layout">
           <div className="resume-main">
@@ -146,9 +145,10 @@ export default function Home() {
                   <div className="exp-date">December 2022 – Present</div>
                 </div>
                 <ul className="exp-bullets">
-                  <li>Increased patient app adoption by 5% through user discovery, usability assessment, and A/B testing on a direct-to-consumer mobile product.</li>
+                  <li>Increased patient app adoption by 10% through user discovery, usability assessment, and A/B testing on a direct-to-consumer mobile product.</li>
                   <li>Increased fill volume by 30% and onboarded 20+ new pharmacies by identifying pain points through qualitative research including interviews, contextual inquiry, and concept testing.</li>
                   <li>Led workshops with cross-functional leadership to map service design for new pharmacy verticals, directly influencing product strategy and roadmap.</li>
+                  <li>Coach and mentor pharmacy project team to build and triage issues to improve pharmacy workflow.</li>
                 </ul>
 
                 <div className="exp-header" style={{ marginTop: '0.75rem' }}>
@@ -185,6 +185,21 @@ export default function Home() {
                   <li>Launched a beta program to gather continuous user feedback for bug tracking and product improvements.</li>
                 </ul>
               </div>
+
+              <div className="exp-item">
+                <div className="exp-role" style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.1rem' }}>Washington MESA</div>
+                <div className="exp-company" style={{ fontStyle: 'italic', marginBottom: '0.75rem' }}>A program supporting underrepresented students in math, engineering, and science achievement.</div>
+
+                <div className="exp-header">
+                  <div className="exp-role">Research Assistant</div>
+                  <div className="exp-date">April 2014 – June 2017</div>
+                </div>
+                <ul className="exp-bullets">
+                  <li>Worked on research that focused on retention rates in engineering education of underrepresented demographics at the college level.</li>
+                  <li>Assisted in content and curriculum development for project-based learning in STEM for K-12 students.</li>
+                  <li>Assisted in planning and execution of professional developments for Pacific Northwest MESA teachers.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -199,20 +214,20 @@ export default function Home() {
 
             <div className="resume-section">
               <div className="resume-section-title">Research skills</div>
-              <div className="skill-chips">
-                <span className="skill-chip sage">User interviews</span>
-                <span className="skill-chip sage">Usability testing</span>
-                <span className="skill-chip">Diary studies</span>
-                <span className="skill-chip">Contextual inquiry</span>
-                <span className="skill-chip">Ethnographic studies</span>
-                <span className="skill-chip">Survey design</span>
-                <span className="skill-chip">Concept testing</span>
-                <span className="skill-chip">Focus groups</span>
-                <span className="skill-chip">Prototyping</span>
-                <span className="skill-chip sage">Design thinking workshops</span>
-                <span className="skill-chip">UX copywriting</span>
-                <span className="skill-chip">Written communication</span>
-              </div>
+              <ul className="exp-bullets skill-list">
+                <li>User interviews</li>
+                <li>Usability testing</li>
+                <li>Diary studies</li>
+                <li>Contextual inquiry</li>
+                <li>Ethnographic studies</li>
+                <li>Survey design</li>
+                <li>Concept testing</li>
+                <li>Focus groups</li>
+                <li>Prototyping</li>
+                <li>Design thinking workshops</li>
+                <li>UX copywriting</li>
+                <li>Written communication</li>
+              </ul>
             </div>
 
           </div>

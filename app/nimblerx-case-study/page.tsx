@@ -46,7 +46,7 @@ export default function NimbleRxCaseStudy() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', maxWidth: '100%' }}>
           <div style={{ padding: '2rem 5rem', borderRight: '1px solid rgba(168,84,112,0.15)' }}>
             <div style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.5rem' }}>The problem</div>
-            <div style={{ fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300 }}>Only 10 in 100 eligible prescription fills used Pharmacy Checkout, quietly leaking prescription volume and GMV outside the platform.</div>
+            <div style={{ fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300 }}>30% of eligible prescription fills were processed outside Nimble entirely because pharmacy staff weren&apos;t using Pharmacy Checkout, quietly leaking prescription volume and GMV off the platform.</div>
           </div>
           <div style={{ padding: '2rem 5rem' }}>
             <div style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.5rem' }}>The outcome</div>
@@ -75,8 +75,8 @@ export default function NimbleRxCaseStudy() {
         {/* BACKGROUND */}
         <div className="cs-section">
           <p className="cs-section-label">Background</p>
-          <h2 className="cs-section-title">NimbleRx makes money when transactions flow through the platform</h2>
-          <p>NimbleRx generates revenue when prescriptions are processed through its platform. Pharmacy Checkout is a point-of-sale tool built into Nimble that lets pharmacy staff process orders on behalf of patients. When it doesn&apos;t get used, prescriptions get sold outside Nimble entirely — lost volume, lost GMV, and a missed opportunity.</p>
+          <h2 className="cs-section-title">NimbleRx makes money when transactions flow through the platform, but 30 in 100 eligible fills slip outside it</h2>
+          <p>NimbleRx generates revenue when prescriptions are processed through its platform. Pharmacy Checkout is a point-of-sale tool built into Nimble that lets pharmacy staff process orders on behalf of patients. When it doesn&apos;t get used, prescriptions get sold outside Nimble entirely: lost volume, lost GMV, a missed opportunity.</p>
           <p>Analytics showed only 10 in every 100 eligible fills were completed via Pharmacy Checkout. The data showed us the gap. It couldn&apos;t tell us why.</p>
         </div>
 
@@ -124,7 +124,7 @@ export default function NimbleRxCaseStudy() {
             <text x="724" y="328" fontSize="10" fill="#6B4F5A">so why aren&apos;t they using it?</text>
           </svg>
         </div>
-        <p className="cs-screenshot-caption" style={{ marginTop: 0 }}>Of every 100 prescription fills, only 10 were processed via Pharmacy Checkout. That gap is what this research set out to close.</p>
+        <p className="cs-screenshot-caption" style={{ marginTop: 0 }}>Numbers simplified to a per-100 scale for clarity; actual fill volume was in the thousands.</p>
 
         <div style={{ background: '#F9F0F2', borderLeft: '4px solid #A85470', borderRadius: '0 4px 4px 0', padding: '2rem 2.5rem', margin: '2rem 0' }}>
           <p style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#A85470', margin: '0 0 0.75rem' }}>Research question</p>
@@ -136,7 +136,7 @@ export default function NimbleRxCaseStudy() {
         {/* RESEARCH APPROACH */}
         <div className="cs-section">
           <p className="cs-section-label">Research approach</p>
-          <h2 className="cs-section-title">Starting with the data, then going to the source</h2>
+          <h2 className="cs-section-title">Starting with identifying who and then understanding why</h2>
 
           <div style={{ display: 'flex', flexDirection: 'column', marginTop: '1.5rem' }}>
 
@@ -165,7 +165,7 @@ export default function NimbleRxCaseStudy() {
                 <div style={{ fontSize: '0.65rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.35rem' }}>Discovery</div>
                 <div style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.3 }}>Pharmacy interviews</div>
               </div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>Interviewed staff at the <strong>highest drop-off pharmacies</strong> to understand where checkout was breaking down in their workflow.</div>
+              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>Interviewed staff at the <strong>highest drop-off pharmacies</strong> to understand where checkout was breaking down in their workflow, and whether the <strong>platform aligned with pharmacies&apos; business needs</strong>.</div>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '1.25rem', padding: '1.25rem 0', borderTop: '1px solid rgba(168,84,112,0.15)', alignItems: 'start' }}>
@@ -256,7 +256,11 @@ export default function NimbleRxCaseStudy() {
               <div>
                 <div style={{ fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem' }}>UX simplification</div>
                 <div style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem' }}>Simplify the checkout flow</div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>Fewer clicks, success and error feedback, and inputs surfaced directly instead of nested.</div>
+                <ul style={{ margin: 0, paddingLeft: '1.1rem', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                  <li style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>Fewer clicks</li>
+                  <li style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>Success and error feedback</li>
+                  <li style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>Inputs surfaced directly instead of nested</li>
+                </ul>
               </div>
             </div>
 
@@ -267,7 +271,10 @@ export default function NimbleRxCaseStudy() {
               <div>
                 <div style={{ fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem' }}>Remove friction</div>
                 <div style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem' }}>Make email optional</div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>Removed the email requirement so checkout could always be completed regardless of patient data.</div>
+                <ul style={{ margin: 0, paddingLeft: '1.1rem', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                  <li style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>Removed the email requirement</li>
+                  <li style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>Checkout can always be completed regardless of patient data</li>
+                </ul>
               </div>
             </div>
 
@@ -278,7 +285,10 @@ export default function NimbleRxCaseStudy() {
               <div>
                 <div style={{ fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem' }}>New capability</div>
                 <div style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem' }}>Build digital signature support</div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>Specialty pharmacies needed signatures for post-COVID compliance audits. Without it, Nimble couldn&apos;t replace their existing POS workflow.</div>
+                <ul style={{ margin: 0, paddingLeft: '1.1rem', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                  <li style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>Specialty pharmacies needed signatures for post-COVID compliance audits</li>
+                  <li style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>Without it, Nimble couldn&apos;t replace their existing POS workflow</li>
+                </ul>
               </div>
             </div>
 
