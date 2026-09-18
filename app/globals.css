@@ -19,7 +19,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -27,7 +27,17 @@ body {
   color: var(--text-primary);
   line-height: 1.7;
   font-size: 16px;
+  overflow-x: clip;
 }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Suppress focus ring on mouse/touch — only show on keyboard */
+:focus:not(:focus-visible) { outline: none; }
 
 /* ---- NAV ---- */
 nav {
@@ -615,8 +625,24 @@ footer {
   font-weight: 300;
 }
 
+/* ---- WORK GRID ---- */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .work-grid { grid-template-columns: 1fr; }
+}
+
 /* ---- CUSTOMER JOURNEY (lifecycle) ---- */
-.cj { font-family: 'Plus Jakarta Sans', sans-serif; min-width: 620px; }
+.cj { font-family: 'Plus Jakarta Sans', sans-serif; min-width: 620px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .cj-intro { font-size: 11px; color: #A8899A; margin-bottom: 1.75rem; font-style: italic; }
 .cj-stages { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
 .cj-stages::after { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 2px; background: #EBF3EF; z-index: 0; }
@@ -632,7 +658,7 @@ footer {
 .cj-note { font-size: 10.5px; color: #366B58; font-style: italic; margin-top: 6px; padding-top: 6px; border-top: 0.5px solid #D4EAE0; line-height: 1.5; }
 
 /* ---- BEFORE BLUEPRINT (lifecycle) ---- */
-.bpb { font-family: 'Plus Jakarta Sans', sans-serif; min-width: 700px; }
+.bpb { font-family: 'Plus Jakarta Sans', sans-serif; min-width: 700px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .bpb .g7 { display: grid; grid-template-columns: 80px repeat(6, 1fr); gap: 0; }
 .bpb .sl { text-align: center; padding: 10px 6px; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: #1E1118; border-right: 1px solid rgba(255,255,255,0.08); }
 .bpb .sl.g { background: #366B58; }
@@ -656,7 +682,7 @@ footer {
 .bpb .ld { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
 /* ---- AFTER BLUEPRINT (lifecycle) ---- */
-.bp-s { font-family: 'Plus Jakarta Sans', sans-serif; padding: 0.5rem 0; min-width: 700px; }
+.bp-s { font-family: 'Plus Jakarta Sans', sans-serif; padding: 0.5rem 0; min-width: 700px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .bp-s .sec-title { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
 .bp-s .sec-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 .bp-s .g7 { display: grid; grid-template-columns: 80px repeat(6, 1fr); gap: 0; }
@@ -685,7 +711,7 @@ footer {
 .bp-s .ld { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
 /* ---- WOZ DIAGRAM (telenav) ---- */
-.woz { font-family: 'Plus Jakarta Sans', sans-serif; min-width: 560px; }
+.woz { font-family: 'Plus Jakarta Sans', sans-serif; min-width: 560px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .woz-row { display: flex; align-items: center; gap: 0; margin-bottom: 0; }
 .woz-node { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; }
 .woz-circle { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }

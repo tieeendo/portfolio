@@ -74,7 +74,7 @@ export default function Home() {
         <h2 className="section-title">Take a look at my previous work</h2>
         <p className="section-subtitle">A selection of studies spanning enterprise SaaS and consumer products, each started with a real user problem and ended with a measurable change.</p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', marginTop: '1rem' }}>
+        <div className="work-grid">
 
           {/* Lifecycle card */}
           <a href="/nimblerx-lifecycle-case-study" style={{ background: '#FFFFFF', border: '0.5px solid rgba(168,84,112,0.15)', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', display: 'flex', flexDirection: 'column', transition: 'border-color 0.2s' }}>
