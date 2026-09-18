@@ -11,7 +11,7 @@ export default function TelenavCaseStudy() {
         <div className="cs-hero-content" style={{paddingBottom: '2.5rem'}}>
           <p className="cs-eyebrow">Telenav · Lead UX Researcher · 2020</p>
           <h1 className="cs-title">Building a voice-based ordering experience that&apos;s safe to use while driving</h1>
-          <p className="cs-subtitle">A discovery and evaluative research project to define user requirements and test a new conversational UI for Telenav&apos;s In-Car Commerce OEM product.</p>
+          <p className="cs-subtitle">Two rounds of research: first to understand what drivers need, then to test whether the voice UI was safe enough to actually use.</p>
           <div style={{padding: '1.25rem 0', display: 'flex', gap: '2rem', alignItems: 'center', borderTop: '2px solid var(--text-primary)', flexWrap: 'wrap'}}>
             <div style={{display: 'flex', gap: '0.4rem', alignItems: 'baseline', whiteSpace: 'nowrap'}}>
               <span style={{fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)'}}>Role</span>
@@ -45,11 +45,11 @@ export default function TelenavCaseStudy() {
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', maxWidth: '100%'}}>
           <div style={{padding: '2rem 5rem', borderRight: '1px solid rgba(168,84,112,0.15)'}}>
             <div style={{fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.5rem'}}>The problem</div>
-            <div style={{fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300}}>How do you build a voice ordering system that&apos;s safe, intuitive, and usable while driving?</div>
+            <div style={{fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300}}>How do you build a voice ordering system drivers can actually use without taking their eyes off the road?</div>
           </div>
           <div style={{padding: '2rem 5rem'}}>
             <div style={{fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.5rem'}}>The outcome</div>
-            <div style={{fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300, marginBottom: '0.75rem'}}>Insights informed design changes and established a new approved remote testing protocol for voice products at Telenav.</div>
+            <div style={{fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300, marginBottom: '0.75rem'}}>Findings shaped the next design sprint, and the remote WoZ protocol I built for this study was approved for future voice testing at Telenav.</div>
             <div style={{display: 'flex', gap: '2rem', marginTop: '0.5rem'}}>
               <div style={{display: 'flex', alignItems: 'baseline', gap: '0.5rem'}}>
                 <span style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1}}>6</span>
@@ -74,7 +74,7 @@ export default function TelenavCaseStudy() {
         <div className="cs-section">
           <p className="cs-section-label">Background</p>
           <h2 className="cs-section-title">Voice ordering in the car is a hard problem.</h2>
-          <p>Telenav was building a voice-based ordering system for OEM clients — letting drivers order food, coffee, and parking without looking away from the road. The challenge was designing an experience that was safe and low cognitive load, while COVID made in-person testing impossible.</p>
+          <p>Telenav was building a voice-based ordering system for OEM clients, letting drivers order food, coffee, and parking without looking away from the road. The challenge was building something safe enough to use at 60mph, while COVID made in-person testing impossible.</p>
 
           <div style={{background: '#F9F0F2', borderLeft: '4px solid var(--accent)', borderRadius: '0 4px 4px 0', padding: '2rem 2.5rem', margin: '2rem 0'}}>
             <p style={{fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', margin: '0 0 0.75rem'}}>Research question</p>
@@ -89,7 +89,7 @@ export default function TelenavCaseStudy() {
         <div className="cs-section">
           <p className="cs-section-label">Research approach</p>
           <h2 className="cs-section-title">Discovery first, then evaluation</h2>
-          <p>Two phases: understand who the users are and what they need, then test early designs for safety and usability.</p>
+          <p>Two phases: understand the drivers first, then test early designs against safety and usability.</p>
 
           <div style={{display: 'flex', flexDirection: 'column', marginTop: '1.5rem'}}>
 
@@ -101,7 +101,7 @@ export default function TelenavCaseStudy() {
                 </div>
               </div>
               <div style={{fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)'}}>User interviews &amp; persona creation</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Interviewed OEM drivers who frequently order while driving. Synthesized findings into personas to guide design direction.</div>
+              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Interviewed OEM drivers who order regularly on the road. Built personas from the patterns to focus the design work.</div>
             </div>
 
             <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '1.25rem', padding: '1.25rem 0', borderTop: '1px solid rgba(168,84,112,0.15)', alignItems: 'center'}}>
@@ -112,7 +112,7 @@ export default function TelenavCaseStudy() {
                 </div>
               </div>
               <div style={{fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)'}}>Literature review</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Reviewed research on voice testing, cognitive load, and conversational UI to build a heuristics framework for evaluation.</div>
+              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Reviewed research on voice testing, cognitive load, and conversational UI to build an evaluation framework before touching the prototype.</div>
             </div>
 
             <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '1.25rem', padding: '1.25rem 0', borderTop: '1px solid rgba(168,84,112,0.15)', alignItems: 'center'}}>
@@ -146,7 +146,7 @@ export default function TelenavCaseStudy() {
         <div className="cs-section">
           <p className="cs-section-label">Testing protocol</p>
           <h2 className="cs-section-title">A new way to test voice remotely</h2>
-          <p>With in-person testing off the table, I designed a remote Wizard of Oz protocol that let us simulate a voice experience over Zoom. The researcher controls the prototype responses in real time while the participant speaks naturally, creating the illusion of a live voice system.</p>
+          <p>With in-person testing off the table, I designed a remote Wizard of Oz protocol that let us simulate a voice experience over Zoom. The participant speaks naturally while the researcher advances the prototype from behind the screen. To the participant, it feels like a real voice system.</p>
 
           <div style={{marginTop: '1.75rem', overflowX: 'auto'}}>
             <div className="woz">
@@ -217,14 +217,14 @@ export default function TelenavCaseStudy() {
         {/* INSIGHTS */}
         <div className="cs-section">
           <p className="cs-section-label">Key insights</p>
-          <h2 className="cs-section-title">Three usability problems emerged consistently</h2>
+          <h2 className="cs-section-title">The same three problems came up in every session</h2>
           <p style={{fontSize: '0.82rem', color: 'var(--text-muted)', fontStyle: 'italic'}}>Due to NDA restrictions, specifics are redacted. These are high-level findings.</p>
 
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', margin: '1.5rem 0'}}>
             <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.15)', borderTop: '3px solid var(--accent)', borderRadius: '4px', padding: '1.5rem'}}>
               <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem'}}>Insight 01</div>
               <div style={{fontSize: '0.92rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.5rem', lineHeight: 1.35}}>Users forget what they ordered</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>A voice-only order summary increases cognitive load. Users need a quick visual reference to recall items without being distracted from the road.</div>
+              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>A voice-only summary isn&apos;t enough. Users need something glanceable to confirm what they ordered without looking away from the road.</div>
             </div>
             <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.15)', borderTop: '3px solid var(--accent)', borderRadius: '4px', padding: '1.5rem'}}>
               <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem'}}>Insight 02</div>
@@ -234,7 +234,7 @@ export default function TelenavCaseStudy() {
             <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.15)', borderTop: '3px solid var(--accent)', borderRadius: '4px', padding: '1.5rem'}}>
               <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem'}}>Insight 03</div>
               <div style={{fontSize: '0.92rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.5rem', lineHeight: 1.35}}>Unfamiliar menus make voice ordering unusable</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>A heavily voice-driven UI assumes users know the menu. For infrequent customers, not knowing item names makes the system impossible to use without visual support.</div>
+              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>A voice-first UI only works if you know what to ask for. Occasional customers don&apos;t know the menu, and that alone makes the whole interaction break down.</div>
             </div>
           </div>
         </div>
@@ -244,24 +244,24 @@ export default function TelenavCaseStudy() {
         {/* IMPACT */}
         <div className="cs-section">
           <p className="cs-section-label">Impact</p>
-          <h2 className="cs-section-title">Research informed design and unlocked a new testing approach</h2>
+          <h2 className="cs-section-title">Research shaped the design sprint and established a new testing protocol</h2>
 
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', margin: '1.5rem 0'}}>
             <div style={{background: '#F9F0F2', borderRadius: '8px', padding: '1.5rem'}}>
               <div style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: 'var(--accent)', lineHeight: 1, marginBottom: '0.5rem'}}>New protocol</div>
               <div style={{fontSize: '0.82rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.25rem'}}>Remote Wizard of Oz testing approved</div>
-              <div style={{fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.6}}>The remote testing protocol developed for this study was formally approved, enabling lean iterative voice testing for future conversational flow work.</div>
+              <div style={{fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.6}}>The protocol I built for this study was formally approved and became Telenav&apos;s standard for voice testing going forward.</div>
             </div>
             <div style={{background: '#F9F0F2', borderRadius: '8px', padding: '1.5rem'}}>
               <div style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: 'var(--accent)', lineHeight: 1, marginBottom: '0.5rem'}}>Design changes</div>
-              <div style={{fontSize: '0.82rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.25rem'}}>Findings directly informed the next design sprint</div>
-              <div style={{fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.6}}>Insights on cognitive load, audio cues, and menu familiarity shaped changes to the conversation flow and visual display strategy.</div>
+              <div style={{fontSize: '0.82rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.25rem'}}>The next design sprint was built around these findings</div>
+              <div style={{fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.6}}>Three problems, three design changes: a glanceable order summary, audio listening cues, and a redesigned flow for users who don&apos;t know the menu.</div>
             </div>
           </div>
 
           <div style={{background: '#EBF3EF', borderRadius: '4px', padding: '1.25rem 1.5rem', marginTop: '0.5rem'}}>
             <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.5rem'}}>A note</div>
-            <div style={{fontSize: '0.85rem', color: '#1E3D2F', fontWeight: 300, lineHeight: 1.7}}>I left Telenav before the product reached full build-out. The work captured here reflects the research phase and its direct outputs. Future planned work included driving usability testing and distraction and cognitive load assessment using NHTSA recommended methods.</div>
+            <div style={{fontSize: '0.85rem', color: '#1E3D2F', fontWeight: 300, lineHeight: 1.7}}>I left Telenav before the product was fully built. What&apos;s here covers the research phase. The planned next steps were in-car usability testing and distraction assessment using NHTSA methods.</div>
           </div>
         </div>
 

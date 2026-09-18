@@ -15,7 +15,7 @@ export default function NimbleRxCaseStudy() {
         <div className="cs-hero-content" style={{ paddingBottom: '2.5rem' }}>
           <p className="cs-eyebrow">NimbleRx · Lead UX Researcher · 2023</p>
           <h1 className="cs-title">Why pharmacies weren&apos;t using checkout, and what it was costing us</h1>
-          <p className="cs-subtitle">A mixed-methods study to uncover why a revenue-critical feature had low adoption, and what it would take to turn that around.</p>
+          <p className="cs-subtitle">A mixed-methods study to find out why a revenue-critical feature sat unused, and what to do about it.</p>
           <div style={{ padding: '1.25rem 0', display: 'flex', gap: '2rem', alignItems: 'center', borderTop: '2px solid var(--text-primary)', flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'baseline', whiteSpace: 'nowrap' }}>
               <span style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)' }}>Role</span>
@@ -46,11 +46,11 @@ export default function NimbleRxCaseStudy() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', maxWidth: '100%' }}>
           <div style={{ padding: '2rem 5rem', borderRight: '1px solid rgba(168,84,112,0.15)' }}>
             <div style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.5rem' }}>The problem</div>
-            <div style={{ fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300 }}>30% of eligible prescription fills were processed outside Nimble entirely because pharmacy staff weren&apos;t using Pharmacy Checkout, quietly leaking prescription volume and GMV off the platform.</div>
+            <div style={{ fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300 }}>Only 10 in 100 eligible prescription fills went through Pharmacy Checkout. The other 90 were processed outside Nimble entirely.</div>
           </div>
           <div style={{ padding: '2rem 5rem' }}>
             <div style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.5rem' }}>The outcome</div>
-            <div style={{ fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300, marginBottom: '0.75rem' }}>Research drove a redesign that directly moved key metrics across feature adoption, prescription volume, and pharmacy growth.</div>
+            <div style={{ fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300, marginBottom: '0.75rem' }}>Research drove a redesign. Feature usage, prescription volume, and pharmacy growth all shifted in the same quarter.</div>
             <div style={{ display: 'flex', gap: '2rem', marginTop: '0.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
                 <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1 }}>+30%</span>
@@ -75,8 +75,8 @@ export default function NimbleRxCaseStudy() {
         {/* BACKGROUND */}
         <div className="cs-section">
           <p className="cs-section-label">Background</p>
-          <h2 className="cs-section-title">NimbleRx makes money when transactions flow through the platform, but 30 in 100 eligible fills slip outside it</h2>
-          <p>NimbleRx generates revenue when prescriptions are processed through its platform. Pharmacy Checkout is a point-of-sale tool built into Nimble that lets pharmacy staff process orders on behalf of patients. When it doesn&apos;t get used, prescriptions get sold outside Nimble entirely: lost volume, lost GMV, a missed opportunity.</p>
+          <h2 className="cs-section-title">NimbleRx makes money when transactions flow through the platform</h2>
+          <p>NimbleRx generates revenue when prescriptions are processed through its platform. Pharmacy Checkout is a point-of-sale tool built into Nimble that lets pharmacy staff process orders on behalf of patients. When it doesn&apos;t get used, prescriptions get sold outside Nimble entirely: lost volume, lost GMV, and a missed opportunity.</p>
           <p>Analytics showed only 10 in every 100 eligible fills were completed via Pharmacy Checkout. The data showed us the gap. It couldn&apos;t tell us why.</p>
         </div>
 
@@ -124,11 +124,11 @@ export default function NimbleRxCaseStudy() {
             <text x="724" y="328" fontSize="10" fill="#6B4F5A">so why aren&apos;t they using it?</text>
           </svg>
         </div>
-        <p className="cs-screenshot-caption" style={{ marginTop: 0 }}>Numbers simplified to a per-100 scale for clarity; actual fill volume was in the thousands.</p>
+        <p className="cs-screenshot-caption" style={{ marginTop: 0 }}>Of every 100 prescription fills, only 10 went through Pharmacy Checkout. This research was about figuring out why.</p>
 
         <div style={{ background: '#F9F0F2', borderLeft: '4px solid #A85470', borderRadius: '0 4px 4px 0', padding: '2rem 2.5rem', margin: '2rem 0' }}>
           <p style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#A85470', margin: '0 0 0.75rem' }}>Research question</p>
-          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.2, margin: 0 }}>How can we increase pharmacy usage of Pharmacy Checkout to capture missed revenue and leverage it as a primary point-of-sale?</p>
+          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.2, margin: 0 }}>How do we get pharmacies to use Pharmacy Checkout as their primary point-of-sale, and stop losing the prescription volume that's leaving the platform?</p>
         </div>
 
         <hr className="cs-divider" />
@@ -193,7 +193,7 @@ export default function NimbleRxCaseStudy() {
                 <div style={{ fontSize: '0.65rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.35rem' }}>Validation</div>
                 <div style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.3 }}>Concept testing</div>
               </div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>Tested proposed solutions with the same pharmacy staff to confirm <strong>what would actually reduce friction</strong> before anything was built.</div>
+              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>Tested proposed solutions with the same pharmacy staff to confirm <strong>what would actually work</strong> before anything was built.</div>
             </div>
 
           </div>
@@ -211,7 +211,7 @@ export default function NimbleRxCaseStudy() {
             <div style={{ background: '#fff', border: '1px solid rgba(168,84,112,0.15)', borderTop: '3px solid #A85470', borderRadius: '4px', padding: '1.5rem' }}>
               <div style={{ fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem' }}>Insight 01</div>
               <div style={{ fontSize: '0.92rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.6rem', lineHeight: 1.35 }}>Usability friction at every step</div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>Poor navigation, required input fields with no fallback, and minimal feedback left staff confused and added unnecessary steps to an already busy workflow.</div>
+              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>Poor navigation, required fields with no fallback, and minimal feedback confused staff and added steps they didn&apos;t have time for.</div>
             </div>
             <div style={{ background: '#fff', border: '1px solid rgba(168,84,112,0.15)', borderTop: '3px solid #A85470', borderRadius: '4px', padding: '1.5rem' }}>
               <div style={{ fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem' }}>Insight 02</div>
@@ -244,8 +244,8 @@ export default function NimbleRxCaseStudy() {
         {/* RECOMMENDATIONS */}
         <div className="cs-section">
           <p className="cs-section-label">What we changed</p>
-          <h2 className="cs-section-title">Each insight mapped to a specific product change</h2>
-          <p>All three recommendations shipped in the same Q1 release.</p>
+          <h2 className="cs-section-title">Three insights, three product changes</h2>
+          <p>All three shipped in the same Q1 release.</p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '1.25rem', marginTop: '1.5rem' }}>
 
@@ -300,14 +300,14 @@ export default function NimbleRxCaseStudy() {
         {/* IMPACT */}
         <div className="cs-section">
           <p className="cs-section-label">Impact</p>
-          <h2 className="cs-section-title">Research directly shaped product changes that moved the business</h2>
-          <p>All three changes shipped in Q1. Results were measurable within the quarter.</p>
+          <h2 className="cs-section-title">Three changes, all shipped in Q1. All measurable.</h2>
+          <p>Results came back in the same quarter they shipped.</p>
 
           <div style={{ background: '#F9F0F2', borderRadius: '6px', padding: '2.5rem 2rem', display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 0, marginTop: '1.5rem' }}>
             <div style={{ paddingRight: '2rem', borderRight: '1px solid rgba(168,84,112,0.15)' }}>
               <div style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem' }}>Adoption</div>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '4rem', fontWeight: 500, color: '#A85470', lineHeight: 0.9, marginBottom: '0.75rem' }}>+30<span style={{ fontSize: '2rem' }}>%</span></div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.6, borderTop: '1px solid rgba(168,84,112,0.12)', paddingTop: '0.75rem' }}>Easier navigation and optional input fields reduced friction across 20+ partner pharmacies.</div>
+              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.6, borderTop: '1px solid rgba(168,84,112,0.12)', paddingTop: '0.75rem' }}>Easier navigation and optional fields got 20+ partner pharmacies using checkout consistently.</div>
             </div>
             <div style={{ padding: '0 2rem', borderRight: '1px solid rgba(168,84,112,0.15)' }}>
               <div style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem' }}>Volume</div>
@@ -317,13 +317,13 @@ export default function NimbleRxCaseStudy() {
             <div style={{ paddingLeft: '2rem' }}>
               <div style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem' }}>Acquisition</div>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '4rem', fontWeight: 500, color: '#A85470', lineHeight: 0.9, marginBottom: '0.75rem' }}>+20</div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.6, borderTop: '1px solid rgba(168,84,112,0.12)', paddingTop: '0.75rem' }}>Pharmacies onboarded after digital signature support removed a key compliance blocker.</div>
+              <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.6, borderTop: '1px solid rgba(168,84,112,0.12)', paddingTop: '0.75rem' }}>New pharmacies that had been waiting on digital signature support before they could go live.</div>
             </div>
           </div>
 
           <div style={{ background: '#EBF3EF', borderRadius: '4px', padding: '1.25rem 1.5rem', marginTop: '1rem' }}>
             <div style={{ fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.4rem' }}>Longer-term impact</div>
-            <div style={{ fontSize: '0.88rem', color: '#1E3D2F', fontWeight: 300, lineHeight: 1.7 }}>The pharmacies onboarded through this research turned out to be a top chain. Over the following years, they became responsible for roughly <strong style={{ color: '#1E3D2F', fontWeight: 500 }}>50% of Nimble&apos;s revenue</strong> — making this one of the highest-impact research outcomes in the company&apos;s history.</div>
+            <div style={{ fontSize: '0.88rem', color: '#1E3D2F', fontWeight: 300, lineHeight: 1.7 }}>The pharmacies onboarded through this research turned out to be a top chain. Over the following years, they became responsible for roughly <strong style={{ color: '#1E3D2F', fontWeight: 500 }}>50% of Nimble&apos;s revenue</strong>. Nobody predicted that when the research started.</div>
           </div>
         </div>
 

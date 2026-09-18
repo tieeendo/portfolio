@@ -16,7 +16,7 @@ export default function Home() {
         <div className="hero-text">
           <h1 className="hero-name">Hi, my name is Tien.</h1>
           <div className="hero-bio">
-            <p>I&apos;m a UX researcher with 8+ years of experience turning ambiguous problems into clear, actionable insights. I&apos;ve worked in a mixture of industries from education to healthcare. What I love most is how curiosity translates across industries.</p>
+            <p>I&apos;m a UX researcher with 7+ years of experience turning fuzzy problems into findings teams can act on. From founding researcher at a healthcare startup to leading infotainment research at a major automotive tech company. What I love most is that curiosity is portable. A different industry just means a new set of questions, which is exactly the part I&apos;m here for.</p>
             <p>Based in Seattle, where I live with two cats who are sassy, naughty, and completely run the household: a tuxedo 🐈‍⬛ and an orange menace 🐈.</p>
             <p><strong>Contact me</strong><br /><a href="mailto:tieeen.do@gmail.com">tieeen.do@gmail.com</a> · <a href="https://www.linkedin.com/in/tien-do/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
           </div>
@@ -71,7 +71,8 @@ export default function Home() {
       {/* CASE STUDIES */}
       <section id="work">
         <p className="section-label">Selected work</p>
-        <h2 className="section-title">Research that moved the needle</h2>
+        <h2 className="section-title">Take a look at my previous work</h2>
+        <p className="section-subtitle">A selection of studies spanning enterprise SaaS and consumer products, each started with a real user problem and ended with a measurable change.</p>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', marginTop: '1rem' }}>
 
@@ -148,7 +149,7 @@ export default function Home() {
 
               <div className="exp-item">
                 <div className="exp-role" style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.1rem' }}>NimbleRx</div>
-                <div className="exp-company" style={{ fontStyle: 'italic', marginBottom: '0.75rem' }}>A technology company that enables pharmacies across the country to streamline their interactions with patients.</div>
+                <div className="exp-company" style={{ fontStyle: 'italic', marginBottom: '0.75rem' }}>A platform that helps independent pharmacies serve patients digitally.</div>
 
                 <div className="exp-header">
                   <div className="exp-role">Senior UX Researcher</div>
@@ -157,8 +158,7 @@ export default function Home() {
                 <ul className="exp-bullets">
                   <li>Increased patient app adoption by 10% through user discovery, usability assessment, and A/B testing on a direct-to-consumer mobile product.</li>
                   <li>Increased fill volume by 30% and onboarded 20+ new pharmacies by identifying pain points through qualitative research including interviews, contextual inquiry, and concept testing.</li>
-                  <li>Led workshops with cross-functional leadership to map service design for new pharmacy verticals, directly influencing product strategy and roadmap.</li>
-                  <li>Coach and mentor pharmacy project team to build and triage issues to improve pharmacy workflow.</li>
+                  <li>Led service design workshops with leaders across Product, CS, and Sales to define how Nimble would expand into new pharmacy types.</li>
                 </ul>
 
                 <div className="exp-header" style={{ marginTop: '0.75rem' }}>
@@ -167,14 +167,14 @@ export default function Home() {
                 </div>
                 <ul className="exp-bullets">
                   <li>Founding researcher across all product verticals, establishing research practice, processes, and tooling from scratch in an early-stage environment.</li>
-                  <li>Improved NPS by 15+ points through improved data collection, tracking, and analysis sharing with leadership.</li>
-                  <li>Built a research repository to improve visibility and drive research adoption across the organization.</li>
+                  <li>Improved NPS by 15+ points by rebuilding how we collected, tracked, and reported satisfaction data to leadership.</li>
+                  <li>Built a research repository so findings didn&apos;t disappear after readouts.</li>
                 </ul>
               </div>
 
               <div className="exp-item">
                 <div className="exp-role" style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.1rem' }}>Telenav</div>
-                <div className="exp-company" style={{ fontStyle: 'italic', marginBottom: '0.75rem' }}>An AI-powered navigation, infotainment, and in-car commerce solutions provider for automotive OEMs.</div>
+                <div className="exp-company" style={{ fontStyle: 'italic', marginBottom: '0.75rem' }}>A navigation and infotainment platform for automotive OEMs, with a focus on in-car commerce.</div>
 
                 <div className="exp-header">
                   <div className="exp-role">UX Researcher</div>
@@ -192,7 +192,7 @@ export default function Home() {
                 </div>
                 <ul className="exp-bullets">
                   <li>Conducted drive-along usability tests for mobile navigation to improve onboarding and first-user experience for a major OEM client.</li>
-                  <li>Launched a beta program to gather continuous user feedback for bug tracking and product improvements.</li>
+                  <li>Launched a beta program that gave the team a direct line to user feedback for bug tracking and fixes.</li>
                 </ul>
               </div>
 

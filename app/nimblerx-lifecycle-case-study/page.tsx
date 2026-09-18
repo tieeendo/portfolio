@@ -43,7 +43,7 @@ export default function NimbleRxLifecycleCaseStudy() {
           </div>
           <div style={{padding: '2rem 5rem'}}>
             <div style={{fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.5rem'}}>The outcome</div>
-            <div style={{fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300, marginBottom: '0.75rem'}}>Cross-functional problems surfaced and aligned with leadership, driving measurable improvements across communications, integrations, and patient adoption.</div>
+            <div style={{fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300, marginBottom: '0.75rem'}}>Cross-functional problems surfaced and got acted on: faster bug resolution, clearer communications, and fewer integration churns.</div>
             <div style={{display: 'flex', gap: '2rem', marginTop: '0.5rem', flexWrap: 'wrap'}}>
               <div style={{display: 'flex', alignItems: 'baseline', gap: '0.5rem'}}>
                 <span style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1}}>48h</span>
@@ -73,7 +73,7 @@ export default function NimbleRxLifecycleCaseStudy() {
           <p className="cs-section-label">Background</p>
           <h2 className="cs-section-title">Pharmacy churn was a symptom. We needed to find the cause.</h2>
           <p>NimbleRx grows when pharmacies stay active on the platform and process volume through it. But pharmacies were leaving. Some after a brief unhealthy period on the platform, others before they even launched. The pattern showed up in the data, but the data couldn&apos;t explain it.</p>
-          <p>Of the pharmacies launched in any given quarter, <strong>25% were churning</strong>. Churn wasn&apos;t just happening at one point. The data showed the pattern but couldn&apos;t tell us why it was happening at each stage.</p>
+          <p>Of the pharmacies launched in any given quarter, <strong>25% were churning</strong>, and it wasn&apos;t concentrated at one stage.</p>
 
           <div style={{background: '#F9F0F2', borderLeft: '4px solid var(--accent)', borderRadius: '0 4px 4px 0', padding: '2rem 2.5rem', margin: '2rem 0'}}>
             <p style={{fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', margin: '0 0 0.75rem'}}>Research question</p>
@@ -85,7 +85,7 @@ export default function NimbleRxLifecycleCaseStudy() {
         <div className="cs-section">
           <p className="cs-section-label">Customer journey</p>
           <h2 className="cs-section-title">How pharmacies are meant to launch with Nimble</h2>
-          <p>Understanding the intended lifecycle is key context for where the research uncovered friction.</p>
+          <p>To understand where things broke, you need to know what the journey was supposed to look like.</p>
 
           <div style={{marginTop: '1.75rem', overflowX: 'auto'}}>
             <div className="cj">
@@ -216,7 +216,7 @@ export default function NimbleRxLifecycleCaseStudy() {
                 </div>
               </div>
               <div style={{fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)'}}>Journey mapping &amp; blueprinting</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Overlaid segment journeys to identify shared pain points and internal process gaps.</div>
+              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Overlaid the four journeys to find where problems clustered and where internal handoffs were breaking.</div>
             </div>
 
             <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '1.25rem', padding: '1.25rem 0', borderTop: '1px solid rgba(168,84,112,0.15)', borderBottom: '1px solid rgba(168,84,112,0.15)', alignItems: 'center'}}>
@@ -227,16 +227,41 @@ export default function NimbleRxLifecycleCaseStudy() {
                 </div>
               </div>
               <div style={{fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)'}}>Cross-functional readout</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Presented to Sales, Onboarding, Product, and CS to align on shared accountability.</div>
+              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Presented to Sales, Onboarding, Product, and CS. Each team could see the problems they owned.</div>
             </div>
 
+          </div>
+
+          <p style={{marginTop: '2rem'}}>The healthy segment was the control. Without it, we&apos;d only see what failure looked like, not what success required.</p>
+
+          <div className="segment-grid" style={{gridTemplateColumns: 'repeat(4, 1fr)', marginTop: '1rem'}}>
+            <div className="segment-card sage-top">
+              <div className="segment-label">Segment 01</div>
+              <div className="segment-title">Launched, healthy</div>
+              <div className="segment-desc">Pharmacies actively using the platform with a strong health score. Included as a positive benchmark to understand what good looks like.</div>
+            </div>
+            <div className="segment-card sage-top">
+              <div className="segment-label">Segment 02</div>
+              <div className="segment-title">Launched, unhealthy</div>
+              <div className="segment-desc">Pharmacies that went live within the last 3 months but have a low health score. Still active, but struggling to gain traction.</div>
+            </div>
+            <div className="segment-card sage-top">
+              <div className="segment-label">Segment 03</div>
+              <div className="segment-title">Launched, then churned</div>
+              <div className="segment-desc">Pharmacies that went live, used the platform for a period, and then disengaged or left entirely.</div>
+            </div>
+            <div className="segment-card sage-top">
+              <div className="segment-label">Segment 04</div>
+              <div className="segment-title">Churned pre-launch</div>
+              <div className="segment-desc">Pharmacies that signed on with Nimble but never went live. The hardest segment to reach and the most upstream failure point.</div>
+            </div>
           </div>
         </div>
 
 {/* INSIGHTS */}
         <div className="cs-section">
           <p className="cs-section-label">Key insights</p>
-          <h2 className="cs-section-title">Many issues surfaced, but they clustered into three categories</h2>
+          <h2 className="cs-section-title">Dozens of issues came up. They grouped into three.</h2>
 
           <div style={{display: 'flex', flexDirection: 'column', gap: '1rem', margin: '1.5rem 0'}}>
 
@@ -271,8 +296,8 @@ export default function NimbleRxLifecycleCaseStudy() {
             {/* Insight 02 — full width */}
             <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.15)', borderTop: '3px solid var(--accent)', borderRadius: '4px', padding: '1.75rem 2rem'}}>
               <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem'}}>Insight 02</div>
-              <div style={{fontSize: '1.1rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.5rem', lineHeight: 1.35}}>Ongoing communication gaps across the lifecycle leave pharmacies feeling unsupported, eroding trust over time</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300, marginBottom: '0.75rem'}}>When pharmacies can&apos;t see what&apos;s being done about their issues, and when their wins go unacknowledged, trust in the partnership erodes over time.</div>
+              <div style={{fontSize: '0.92rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.5rem', lineHeight: 1.35}}>Ongoing communication gaps across the lifecycle leave pharmacies feeling unsupported, eroding trust over time</div>
+              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300, marginBottom: '0.75rem'}}>When a pharmacy logs a bug and hears nothing back, they stop filing bugs. Then they stop trusting the platform.</div>
               <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem'}}>
                 <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>We&apos;re cautious about raising potential issues around integration quality or patient adoption. While that makes for an effective sale, it irks pharmacies further when things go wrong.
@@ -281,10 +306,10 @@ export default function NimbleRxLifecycleCaseStudy() {
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>We don&apos;t follow up enough on issues raised: bugs, enhancement requests, or roadmap transparency. Pharmacies raised concerns and heard nothing back.
                 </div>
                 <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
-                  <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>When issues go unacknowledged, pharmacies feel like they&apos;re submitting feedback into a black hole, leaving them feeling unheard and eroding confidence in the partnership.
+                  <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>When issues go unacknowledged, pharmacies feel like they&apos;re submitting feedback into a black hole.
                 </div>
                 <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
-                  <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>There&apos;s an opportunity to highlight and amplify moments of success in the pharmacy journey. Wins are going unnoticed.
+                  <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>Wins are going unnoticed. There&apos;s no mechanism to surface or celebrate them.
                 </div>
               </div>
               <div style={{position: 'relative', overflow: 'hidden', padding: '0.5rem 0 0'}}>
@@ -415,7 +440,7 @@ export default function NimbleRxLifecycleCaseStudy() {
         <div className="cs-section">
           <p className="cs-section-label">What we changed</p>
           <h2 className="cs-section-title">Each insight mapped to a cross-functional decision</h2>
-          <p>Findings were presented to leaders across Sales, Product, Onboarding, and Customer Success. All four changes were actioned from the research.</p>
+          <p>Findings were presented to leaders across Sales, Product, Onboarding, and Customer Success. All four changes shipped from the research.</p>
 
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '1.25rem', marginTop: '1.5rem'}}>
 
@@ -441,10 +466,7 @@ export default function NimbleRxLifecycleCaseStudy() {
               <div>
                 <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem'}}>Patient · Adoption</div>
                 <div style={{fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem'}}>Deploy a patient education phase via text messaging</div>
-                <ul style={{margin: 0, paddingLeft: '1.1rem', display: 'flex', flexDirection: 'column', gap: '0.35rem'}}>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Introduced a dedicated patient education period triggered at the transitional phase where most confusion occurred</li>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Used Nimble&apos;s existing text messaging infrastructure to guide patients through the change before they encountered friction</li>
-                </ul>
+                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>Introduced a dedicated patient education period triggered at the transitional phase where most confusion occurred. We used Nimble&apos;s existing text messaging infrastructure to reach patients before the phase change happened.</div>
               </div>
             </div>
 
@@ -455,10 +477,7 @@ export default function NimbleRxLifecycleCaseStudy() {
               <div>
                 <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem'}}>Engineering · Integration</div>
                 <div style={{fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem'}}>Invest in smoother integration infrastructure</div>
-                <ul style={{margin: 0, paddingLeft: '1.1rem', display: 'flex', flexDirection: 'column', gap: '0.35rem'}}>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Secured investment to build out more robust integrations for the pharmacy systems we do support</li>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Reduced the disruption that was undermining early adoption and eroding pharmacy confidence in the platform</li>
-                </ul>
+                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>Secured investment to build out more robust integrations for the pharmacy systems we do support, cutting down the disruption that was driving early churn.</div>
               </div>
             </div>
 
@@ -469,12 +488,7 @@ export default function NimbleRxLifecycleCaseStudy() {
               <div>
                 <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem'}}>Product · CS · Communications</div>
                 <div style={{fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem'}}>Establish SLAs for bugs and enhancement requests</div>
-                <ul style={{margin: 0, paddingLeft: '1.1rem', display: 'flex', flexDirection: 'column', gap: '0.35rem'}}>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Built out clear service level agreements</li>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Product committed to reviewing and triaging all incoming requests on a defined timeline</li>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>CS developed criteria to distinguish bugs from knowledge gaps</li>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Reduced unnecessary escalations and gave pharmacies visible acknowledgment that their feedback was being acted on</li>
-                </ul>
+                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>Built out clear service level agreements. Product committed to reviewing and triaging all incoming requests on a defined timeline, and CS developed criteria to distinguish bugs from knowledge gaps, reducing unnecessary escalations and giving pharmacies something they&apos;d never had before: confirmation that their issues were moving.</div>
               </div>
             </div>
 
@@ -485,7 +499,7 @@ export default function NimbleRxLifecycleCaseStudy() {
         <div className="cs-section">
           <p className="cs-section-label">Service blueprint</p>
           <h2 className="cs-section-title">The pharmacy lifecycle after changes</h2>
-          <p>How the full pharmacy experience looks with all four research-driven changes applied, from sales qualification through to a retained, active pharmacy.</p>
+          <p>How the full pharmacy experience looks with all four changes applied, from sales qualification through to a pharmacy that actually sticks around.</p>
 
           <div style={{marginTop: '2rem', overflowX: 'auto'}}>
             <div className="bp-s">
@@ -581,7 +595,7 @@ export default function NimbleRxLifecycleCaseStudy() {
         <div className="cs-section">
           <p className="cs-section-label">Impact</p>
           <h2 className="cs-section-title">Cross-functional problems surfaced, aligned, and acted on</h2>
-          <p>The research didn&apos;t just identify friction. It created a shared language for problems that had been siloed across teams. Getting leadership aligned on the same picture was the first and most important outcome.</p>
+          <p>The research didn&apos;t just identify friction. It put Sales, CS, Product, and Onboarding in the same room with the same problem. That alignment was the first win.</p>
 
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', margin: '1.5rem 0'}}>
             <div style={{background: '#F9F0F2', borderRadius: '8px', padding: '1.5rem'}}>
@@ -610,7 +624,7 @@ export default function NimbleRxLifecycleCaseStudy() {
 
           <div style={{background: '#EBF3EF', borderRadius: '4px', padding: '1.25rem 1.5rem'}}>
             <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.5rem'}}>A note on process</div>
-            <div style={{fontSize: '0.97rem', color: '#1E3D2F', fontWeight: 300, lineHeight: 1.7}}>These improvements are meaningful, but they are the beginning of a longer journey. Fixing deep integration infrastructure takes time and continued investment. What this research enabled was prioritizing the actions with the most immediate customer impact first: clearer communication, faster bug resolution, and better patient onboarding.</div>
+            <div style={{fontSize: '0.97rem', color: '#1E3D2F', fontWeight: 300, lineHeight: 1.7}}>These improvements are meaningful, but they&apos;re not the last fix. Fixing deep integration infrastructure takes time and continued investment. What this research did was force the order of operations: clearer communication and faster bug resolution first, deeper infrastructure second.</div>
           </div>
         </div>
 
