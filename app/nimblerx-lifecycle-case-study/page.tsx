@@ -14,22 +14,22 @@ export default function NimbleRxLifecycleCaseStudy() {
         </div>
         <div style={{padding: '1.25rem 0', display: 'flex', gap: '2rem', alignItems: 'center', borderTop: '2px solid var(--text-primary)', flexWrap: 'nowrap'}}>
           <div style={{display: 'flex', gap: '0.4rem', alignItems: 'baseline', whiteSpace: 'nowrap'}}>
-            <span style={{fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)'}}>Role</span>
+            <span style={{fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)'}}>Role</span>
             <span style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 500}}>Lead UX Researcher</span>
           </div>
           <div style={{width: '1px', height: '12px', background: 'var(--border-strong)', flexShrink: 0}}></div>
           <div style={{display: 'flex', gap: '0.4rem', alignItems: 'baseline', whiteSpace: 'nowrap'}}>
-            <span style={{fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)'}}>Methods</span>
+            <span style={{fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)'}}>Methods</span>
             <span style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 500}}>Interviews · Service blueprinting · Journey mapping</span>
           </div>
           <div style={{width: '1px', height: '12px', background: 'var(--border-strong)', flexShrink: 0}}></div>
           <div style={{display: 'flex', gap: '0.4rem', alignItems: 'baseline', whiteSpace: 'nowrap'}}>
-            <span style={{fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)'}}>Timeline</span>
+            <span style={{fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)'}}>Timeline</span>
             <span style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 500}}>Q4 2025</span>
           </div>
           <div style={{width: '1px', height: '12px', background: 'var(--border-strong)', flexShrink: 0}}></div>
           <div style={{display: 'flex', gap: '0.4rem', alignItems: 'baseline', whiteSpace: 'nowrap'}}>
-            <span style={{fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)'}}>Platform</span>
+            <span style={{fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)'}}>Platform</span>
             <span style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 500}}>Cross-functional</span>
           </div>
         </div>
@@ -38,28 +38,28 @@ export default function NimbleRxLifecycleCaseStudy() {
       <div style={{border: '1px solid rgba(168,84,112,0.2)', borderLeft: 'none', borderRight: 'none'}}>
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', maxWidth: '100%'}}>
           <div style={{padding: '2rem 5rem', borderRight: '1px solid rgba(168,84,112,0.15)'}}>
-            <div style={{fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.5rem'}}>The problem</div>
-            <div style={{fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300}}>25% of pharmacies launched in a quarter were churning, resulting in loss of revenue, volume and also time. We needed to understand what really caused the churn from people, process and product.</div>
+            <div style={{fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 500, marginBottom: '0.5rem'}}>The problem</div>
+            <div style={{fontSize: '0.97rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300}}>25% of pharmacies launched in a quarter were churning, resulting in loss of revenue, volume and also time. We needed to understand what really caused the churn from people, process and product.</div>
           </div>
           <div style={{padding: '2rem 5rem'}}>
-            <div style={{fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', fontWeight: 500, marginBottom: '0.5rem'}}>The outcome</div>
-            <div style={{fontSize: '0.88rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300, marginBottom: '0.75rem'}}>Cross-functional problems surfaced and got acted on: faster bug resolution, clearer communications, and fewer integration churns.</div>
+            <div style={{fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 500, marginBottom: '0.5rem'}}>The outcome</div>
+            <div style={{fontSize: '0.97rem', color: '#1E1118', lineHeight: 1.7, fontWeight: 300, marginBottom: '0.75rem'}}>Cross-functional problems surfaced and got acted on: faster bug resolution, clearer communications, and fewer integration churns.</div>
             <div style={{display: 'flex', gap: '2rem', marginTop: '0.5rem', flexWrap: 'wrap'}}>
               <div style={{display: 'flex', alignItems: 'baseline', gap: '0.5rem'}}>
-                <span style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1}}>48h</span>
-                <span style={{fontSize: '0.78rem', color: '#6B4F5A'}}>bug resolution + SLAs</span>
+                <span style={{fontFamily: "'Lora', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1}}>48h</span>
+                <span style={{fontSize: '0.78rem', color: 'var(--text-secondary)'}}>bug resolution + SLAs</span>
               </div>
               <div style={{display: 'flex', alignItems: 'baseline', gap: '0.5rem'}}>
-                <span style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1}}>+20</span>
-                <span style={{fontSize: '0.78rem', color: '#6B4F5A'}}>NPS points</span>
+                <span style={{fontFamily: "'Lora', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1}}>+20</span>
+                <span style={{fontSize: '0.78rem', color: 'var(--text-secondary)'}}>NPS points</span>
               </div>
               <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A85470" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.55 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l1.05-1.05a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-                <span style={{fontSize: '0.78rem', color: '#6B4F5A'}}>Reduce patient inbounds</span>
+                <span style={{fontSize: '0.78rem', color: 'var(--text-secondary)'}}>Reduce patient inbounds</span>
               </div>
               <div style={{display: 'flex', alignItems: 'baseline', gap: '0.5rem'}}>
-                <span style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1}}>↓</span>
-                <span style={{fontSize: '0.78rem', color: '#6B4F5A'}}>Less integration churns</span>
+                <span style={{fontFamily: "'Lora', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1}}>↓</span>
+                <span style={{fontSize: '0.78rem', color: 'var(--text-secondary)'}}>Less integration churns</span>
               </div>
             </div>
           </div>
@@ -76,8 +76,8 @@ export default function NimbleRxLifecycleCaseStudy() {
           <p>Of the pharmacies launched in any given quarter, <strong>25% were churning</strong>, and it wasn&apos;t concentrated at one stage.</p>
 
           <div style={{background: '#F9F0F2', borderLeft: '4px solid var(--accent)', borderRadius: '0 4px 4px 0', padding: '2rem 2.5rem', margin: '2rem 0'}}>
-            <p style={{fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', margin: '0 0 0.75rem'}}>Research question</p>
-            <p style={{fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.2, margin: 0}}>Where in the pharmacy lifecycle, from sales to post-launch, are the friction points that lead to low health scores and churn?</p>
+            <p style={{fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', margin: '0 0 0.75rem'}}>Research question</p>
+            <p style={{fontFamily: "'Lora', serif", fontSize: '2rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.2, margin: 0}}>Where in the pharmacy lifecycle, from sales to post-launch, are the friction points that lead to low health scores and churn?</p>
           </div>
         </div>
 
@@ -163,99 +163,32 @@ export default function NimbleRxLifecycleCaseStudy() {
 
           <div style={{display: 'flex', flexDirection: 'column', marginTop: '1.5rem'}}>
 
-            <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '1.25rem', padding: '1.25rem 0', borderTop: '1px solid rgba(168,84,112,0.15)', alignItems: 'center'}}>
-              <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px'}}>
-                <span style={{fontFamily: "'Playfair Display', serif", fontSize: '0.72rem', color: 'var(--sage)', fontWeight: 500}}>01</span>
-                <div style={{width: '36px', height: '36px', borderRadius: '50%', background: 'var(--sage-light)', border: '1px solid var(--sage)', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" strokeWidth="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-                </div>
-              </div>
-              <div style={{fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)'}}>Segment-based recruitment</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>12 pharmacies across 3 churn segments, recruited with CS team support. Uneven distribution due to difficulty reaching pre-launch churns.</div>
+            <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '0 2rem', padding: '1.25rem 0', borderTop: '1px solid var(--border)', alignItems: 'baseline'}}>
+              <span style={{fontFamily: "'JetBrains Mono', monospace", fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 500}}>01</span>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)'}}>Segment-based recruitment</div>
+              <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300}}>12 pharmacies across four churn segments — healthy, unhealthy, post-launch churn, and pre-launch churn. Healthy segment included as a control. Distribution was uneven by design: pre-launch churns had already disengaged from Nimble entirely.</div>
             </div>
 
-            <div className="segment-grid" style={{gridTemplateColumns: 'repeat(4, 1fr)', margin: '0.5rem 0 1.25rem'}}>
-              <div className="segment-card sage-top">
-                <div className="segment-label">Segment 01</div>
-                <div className="segment-title">Launched, healthy</div>
-                <div className="segment-desc">Pharmacies actively using the platform with a strong health score. Included as a positive benchmark to understand what good looks like.</div>
-              </div>
-              <div className="segment-card sage-top">
-                <div className="segment-label">Segment 02</div>
-                <div className="segment-title">Launched, unhealthy</div>
-                <div className="segment-desc">Pharmacies that went live within the last 3 months but have a low health score. Still active, but struggling to gain traction.</div>
-              </div>
-              <div className="segment-card sage-top">
-                <div className="segment-label">Segment 03</div>
-                <div className="segment-title">Launched, then churned</div>
-                <div className="segment-desc">Pharmacies that went live, used the platform for a period, and then disengaged or left entirely.</div>
-              </div>
-              <div className="segment-card sage-top">
-                <div className="segment-label">Segment 04</div>
-                <div className="segment-title">Churned pre-launch</div>
-                <div className="segment-desc">Pharmacies that signed on with Nimble but never went live. The hardest segment to reach and the most upstream failure point.</div>
-              </div>
+            <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '0 2rem', padding: '1.25rem 0', borderTop: '1px solid var(--border)', alignItems: 'baseline'}}>
+              <span style={{fontFamily: "'JetBrains Mono', monospace", fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 500}}>02</span>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)'}}>60-min in-depth interviews</div>
+              <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300}}>Traced each pharmacy&apos;s full journey from sales outreach to their current outcome. Some sessions conducted on-site to observe the pharmacy environment firsthand. Included a mood mapping exercise to capture sentiment across the lifecycle.</div>
             </div>
 
-            <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '1.25rem', padding: '1.25rem 0', borderTop: '1px solid rgba(168,84,112,0.15)', alignItems: 'center'}}>
-              <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px'}}>
-                <span style={{fontFamily: "'Playfair Display', serif", fontSize: '0.72rem', color: 'var(--sage)', fontWeight: 500}}>02</span>
-                <div style={{width: '36px', height: '36px', borderRadius: '50%', background: 'var(--sage-light)', border: '1px solid var(--sage)', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" strokeWidth="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                </div>
-              </div>
-              <div style={{fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)'}}>60-min in-depth interviews</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Traced each pharmacy&apos;s full journey from sales outreach to their current outcome. Some sessions conducted on-site to observe the pharmacy environment and setup firsthand. Included a mood mapping exercise to understand sentiment across the lifecycle.</div>
+            <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '0 2rem', padding: '1.25rem 0', borderTop: '1px solid var(--border)', alignItems: 'baseline'}}>
+              <span style={{fontFamily: "'JetBrains Mono', monospace", fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 500}}>03</span>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)'}}>Journey mapping &amp; blueprinting</div>
+              <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300}}>Overlaid the four journeys to find where problems clustered and where internal handoffs were breaking.</div>
             </div>
 
-            <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '1.25rem', padding: '1.25rem 0', borderTop: '1px solid rgba(168,84,112,0.15)', alignItems: 'center'}}>
-              <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px'}}>
-                <span style={{fontFamily: "'Playfair Display', serif", fontSize: '0.72rem', color: 'var(--sage)', fontWeight: 500}}>03</span>
-                <div style={{width: '36px', height: '36px', borderRadius: '50%', background: 'var(--sage-light)', border: '1px solid var(--sage)', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" strokeWidth="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                </div>
-              </div>
-              <div style={{fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)'}}>Journey mapping &amp; blueprinting</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Overlaid the four journeys to find where problems clustered and where internal handoffs were breaking.</div>
-            </div>
-
-            <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '1.25rem', padding: '1.25rem 0', borderTop: '1px solid rgba(168,84,112,0.15)', borderBottom: '1px solid rgba(168,84,112,0.15)', alignItems: 'center'}}>
-              <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px'}}>
-                <span style={{fontFamily: "'Playfair Display', serif", fontSize: '0.72rem', color: 'var(--sage)', fontWeight: 500}}>04</span>
-                <div style={{width: '36px', height: '36px', borderRadius: '50%', background: 'var(--sage-light)', border: '1px solid var(--sage)', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" strokeWidth="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                </div>
-              </div>
-              <div style={{fontSize: '0.9rem', fontWeight: 500, color: 'var(--text-primary)'}}>Cross-functional readout</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300}}>Presented to Sales, Onboarding, Product, and CS. Each team could see the problems they owned.</div>
+            <div style={{display: 'grid', gridTemplateColumns: '3.5rem 1fr 2fr', gap: '0 2rem', padding: '1.25rem 0', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', alignItems: 'baseline'}}>
+              <span style={{fontFamily: "'JetBrains Mono', monospace", fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 500}}>04</span>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)'}}>Cross-functional readout</div>
+              <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300}}>Presented to Sales, Onboarding, Product, and CS. Each team could see the problems they owned.</div>
             </div>
 
           </div>
 
-          <p style={{marginTop: '2rem'}}>The healthy segment was the control. Without it, we&apos;d only see what failure looked like, not what success required.</p>
-
-          <div className="segment-grid" style={{gridTemplateColumns: 'repeat(4, 1fr)', marginTop: '1rem'}}>
-            <div className="segment-card sage-top">
-              <div className="segment-label">Segment 01</div>
-              <div className="segment-title">Launched, healthy</div>
-              <div className="segment-desc">Pharmacies actively using the platform with a strong health score. Included as a positive benchmark to understand what good looks like.</div>
-            </div>
-            <div className="segment-card sage-top">
-              <div className="segment-label">Segment 02</div>
-              <div className="segment-title">Launched, unhealthy</div>
-              <div className="segment-desc">Pharmacies that went live within the last 3 months but have a low health score. Still active, but struggling to gain traction.</div>
-            </div>
-            <div className="segment-card sage-top">
-              <div className="segment-label">Segment 03</div>
-              <div className="segment-title">Launched, then churned</div>
-              <div className="segment-desc">Pharmacies that went live, used the platform for a period, and then disengaged or left entirely.</div>
-            </div>
-            <div className="segment-card sage-top">
-              <div className="segment-label">Segment 04</div>
-              <div className="segment-title">Churned pre-launch</div>
-              <div className="segment-desc">Pharmacies that signed on with Nimble but never went live. The hardest segment to reach and the most upstream failure point.</div>
-            </div>
-          </div>
         </div>
 
 {/* INSIGHTS */}
@@ -266,85 +199,85 @@ export default function NimbleRxLifecycleCaseStudy() {
           <div style={{display: 'flex', flexDirection: 'column', gap: '1rem', margin: '1.5rem 0'}}>
 
             {/* Insight 01 — full width */}
-            <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.15)', borderTop: '3px solid var(--accent)', borderRadius: '4px', padding: '1.75rem 2rem'}}>
-              <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem'}}>Insight 01</div>
-              <div style={{fontSize: '1.1rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.75rem', lineHeight: 1.35}}>Seamless integration is overpromised pre-onboarding, setting pharmacies up with expectations the product can&apos;t meet</div>
+            <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.1)', borderRadius: '4px', padding: '1.75rem 2rem', boxShadow: '0 1px 4px rgba(45,26,34,0.06), 0 4px 16px rgba(45,26,34,0.04)'}}>
+              <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.75rem'}}>Insight 01</div>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '1.35rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '1rem', lineHeight: 1.3}}>Seamless integration is overpromised pre-onboarding, setting pharmacies up with expectations the product can&apos;t meet</div>
               <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem'}}>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>Payment reconciliation required running two systems simultaneously, creating double-payment risks and manual correction workflows.
                 </div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>Workarounds pharmacies adopted to keep Nimble running ultimately negated the efficiency gains the platform was meant to deliver.
                 </div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>Sales had overpromised on integration quality. Pharmacies arrived with expectations the current infrastructure couldn&apos;t meet.
                 </div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '2.25rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '2.25rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: '1.25rem', color: 'var(--accent)'}}>-</span>We were selling to pharmacy systems we knew had poor integration compatibility, setting up failures before onboarding even began.
                 </div>
               </div>
               <div style={{background: '#F9F0F2', borderRadius: '4px', padding: '1rem 1.25rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'baseline', gap: '0.75rem', flexWrap: 'wrap'}}>
-                <span style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1, whiteSpace: 'nowrap'}}>191 hrs</span>
-                <span style={{fontSize: '0.98rem', color: '#6B4F5A', fontWeight: 700, lineHeight: 1.5}}>spent on integration-related inbounds in the last 90 days, the #1 CP inbound topic at 13% of all contacts</span>
+                <span style={{fontFamily: "'JetBrains Mono', monospace", fontSize: '1.5rem', fontWeight: 700, color: '#A85470', lineHeight: 1, whiteSpace: 'nowrap'}}>191 hrs</span>
+                <span style={{fontSize: '0.98rem', color: 'var(--text-secondary)', fontWeight: 400, lineHeight: 1.5}}>spent on integration-related inbounds in the last 90 days, the #1 CP inbound topic at 13% of all contacts</span>
               </div>
               <div style={{position: 'relative', overflow: 'hidden', padding: '0.5rem 0 0'}}>
-                <div style={{fontFamily: "'Playfair Display', serif", fontSize: '10rem', color: 'rgba(168,84,112,0.07)', lineHeight: 1, position: 'absolute', top: '-1.5rem', left: '-0.5rem', pointerEvents: 'none', userSelect: 'none'}}>&ldquo;</div>
-                <p style={{fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 300, fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.85, margin: '0.5rem 0 0.85rem', position: 'relative'}}>We could make Nimble work. But we then had to run it still through Pioneer. <span style={{background: '#FAEDF1', color: '#A85470', padding: '1px 5px', borderRadius: '3px', fontWeight: 500}}>Seconds matter. We&apos;re that busy.</span> It was too burdensome for our staff to make it worth it. <span style={{fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)'}}>— Ryan</span></p>
+                <div style={{fontFamily: "'Lora', serif", fontSize: '10rem', color: 'rgba(168,84,112,0.07)', lineHeight: 1, position: 'absolute', top: '-1.5rem', left: '-0.5rem', pointerEvents: 'none', userSelect: 'none'}}>&ldquo;</div>
+                <p style={{fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.85, margin: '0.5rem 0 0.85rem', position: 'relative'}}>We could make Nimble work. But we then had to run it still through Pioneer. <span style={{background: 'var(--accent-light)', color: '#A85470', padding: '1px 5px', borderRadius: '3px', fontWeight: 500}}>Seconds matter. We&apos;re that busy.</span> It was too burdensome for our staff to make it worth it. <span style={{fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)'}}>— Ryan</span></p>
               </div>
             </div>
 
             {/* Insight 02 — full width */}
-            <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.15)', borderTop: '3px solid var(--accent)', borderRadius: '4px', padding: '1.75rem 2rem'}}>
-              <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem'}}>Insight 02</div>
-              <div style={{fontSize: '0.92rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.5rem', lineHeight: 1.35}}>Ongoing communication gaps across the lifecycle leave pharmacies feeling unsupported, eroding trust over time</div>
-              <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300, marginBottom: '0.75rem'}}>When a pharmacy logs a bug and hears nothing back, they stop filing bugs. Then they stop trusting the platform.</div>
+            <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.1)', borderRadius: '4px', padding: '1.75rem 2rem', boxShadow: '0 1px 4px rgba(45,26,34,0.06), 0 4px 16px rgba(45,26,34,0.04)'}}>
+              <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.75rem'}}>Insight 02</div>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '1.35rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '1rem', lineHeight: 1.3}}>Ongoing communication gaps across the lifecycle leave pharmacies feeling unsupported, eroding trust over time</div>
+              <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300, marginBottom: '0.75rem'}}>When a pharmacy logs a bug and hears nothing back, they stop filing bugs. Then they stop trusting the platform.</div>
               <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem'}}>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>We&apos;re cautious about raising potential issues around integration quality or patient adoption. While that makes for an effective sale, it irks pharmacies further when things go wrong.
                 </div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>We don&apos;t follow up enough on issues raised: bugs, enhancement requests, or roadmap transparency. Pharmacies raised concerns and heard nothing back.
                 </div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>When issues go unacknowledged, pharmacies feel like they&apos;re submitting feedback into a black hole.
                 </div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>Wins are going unnoticed. There&apos;s no mechanism to surface or celebrate them.
                 </div>
               </div>
               <div style={{position: 'relative', overflow: 'hidden', padding: '0.5rem 0 0'}}>
-                <div style={{fontFamily: "'Playfair Display', serif", fontSize: '10rem', color: 'rgba(168,84,112,0.07)', lineHeight: 1, position: 'absolute', top: '-1.5rem', left: '-0.5rem', pointerEvents: 'none', userSelect: 'none'}}>&ldquo;</div>
-                <p style={{fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 300, fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.85, margin: '0.5rem 0 0.85rem', position: 'relative'}}>I had to keep calling and keep calling and be like <span style={{background: '#FAEDF1', color: '#A85470', padding: '1px 5px', borderRadius: '3px', fontWeight: 500}}>&lsquo;what&apos;s the update on the issue&rsquo;</span>, he said let me follow up. Everything was let me follow up, let me follow up. <span style={{fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)'}}>— Mark</span></p>
+                <div style={{fontFamily: "'Lora', serif", fontSize: '10rem', color: 'rgba(168,84,112,0.07)', lineHeight: 1, position: 'absolute', top: '-1.5rem', left: '-0.5rem', pointerEvents: 'none', userSelect: 'none'}}>&ldquo;</div>
+                <p style={{fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.85, margin: '0.5rem 0 0.85rem', position: 'relative'}}>I had to keep calling and keep calling and be like <span style={{background: 'var(--accent-light)', color: '#A85470', padding: '1px 5px', borderRadius: '3px', fontWeight: 500}}>&lsquo;what&apos;s the update on the issue&rsquo;</span>, he said let me follow up. Everything was let me follow up, let me follow up. <span style={{fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)'}}>— Mark</span></p>
               </div>
             </div>
 
             {/* Insight 03 — full width */}
-            <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.15)', borderTop: '3px solid var(--accent)', borderRadius: '4px', padding: '1.75rem 2rem'}}>
-              <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.75rem'}}>Insight 03</div>
-              <div style={{fontSize: '1.1rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.75rem', lineHeight: 1.35}}>At the phase transition, poor patient onboarding drives more calls than before, undermining pharmacy confidence in Nimble</div>
+            <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.1)', borderRadius: '4px', padding: '1.75rem 2rem', boxShadow: '0 1px 4px rgba(45,26,34,0.06), 0 4px 16px rgba(45,26,34,0.04)'}}>
+              <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.75rem'}}>Insight 03</div>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '1.35rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '1rem', lineHeight: 1.3}}>At the phase transition, poor patient onboarding drives more calls than before, undermining pharmacy confidence in Nimble</div>
               <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem'}}>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>Great service is the number one goal of independent pharmacies. Negative feedback from patients, even a miniscule percentage, has a heavy emotional impact on pharmacy staff.
                 </div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>Lack of adoption hurts pharmacies&apos; bottom line (already under pressure) and works against realizing their revenue goals with Nimble.
                 </div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, paddingLeft: '1rem', position: 'relative'}}>
                   <span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>·</span>Bag stuffers are seen as mildly helpful but often arrive too late, are too generic, or there isn&apos;t enough time from closed-win to go-live to get them in patients&apos; hands.
                 </div>
               </div>
               <div style={{background: '#F9F0F2', borderRadius: '4px', padding: '1rem 1.25rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'baseline', gap: '0.75rem', flexWrap: 'wrap'}}>
-                <span style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: '#A85470', lineHeight: 1, whiteSpace: 'nowrap'}}>8–9%</span>
-                <span style={{fontSize: '0.98rem', color: '#6B4F5A', fontWeight: 700, lineHeight: 1.5}}>typical patient adoption rate in retail pharmacies, compared to 70+% adoption at specialty pharmacies, a big difference in experience and value</span>
+                <span style={{fontFamily: "'JetBrains Mono', monospace", fontSize: '1.5rem', fontWeight: 700, color: '#A85470', lineHeight: 1, whiteSpace: 'nowrap'}}>8–9%</span>
+                <span style={{fontSize: '0.98rem', color: 'var(--text-secondary)', fontWeight: 400, lineHeight: 1.5}}>typical patient adoption rate in retail pharmacies, compared to 70+% adoption at specialty pharmacies, a big difference in experience and value</span>
               </div>
               <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem'}}>
                 <div style={{position: 'relative', overflow: 'hidden', padding: '0.5rem 0 0'}}>
-                  <div style={{fontFamily: "'Playfair Display', serif", fontSize: '10rem', color: 'rgba(168,84,112,0.07)', lineHeight: 1, position: 'absolute', top: '-1.5rem', left: '-0.5rem', pointerEvents: 'none', userSelect: 'none'}}>&ldquo;</div>
-                  <p style={{fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 300, fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.85, margin: '0.5rem 0 0.85rem', position: 'relative'}}>If we have these flyers the first month that we launched, it would have been very helpful. <span style={{background: '#FAEDF1', color: '#A85470', padding: '1px 5px', borderRadius: '3px', fontWeight: 500}}>We were told it was going to be a smooth transition and it was not.</span> <span style={{fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)'}}>— Craig</span></p>
+                  <div style={{fontFamily: "'Lora', serif", fontSize: '10rem', color: 'rgba(168,84,112,0.07)', lineHeight: 1, position: 'absolute', top: '-1.5rem', left: '-0.5rem', pointerEvents: 'none', userSelect: 'none'}}>&ldquo;</div>
+                  <p style={{fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.85, margin: '0.5rem 0 0.85rem', position: 'relative'}}>If we have these flyers the first month that we launched, it would have been very helpful. <span style={{background: 'var(--accent-light)', color: '#A85470', padding: '1px 5px', borderRadius: '3px', fontWeight: 500}}>We were told it was going to be a smooth transition and it was not.</span> <span style={{fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)'}}>— Craig</span></p>
                 </div>
                 <div style={{position: 'relative', overflow: 'hidden', padding: '0.5rem 0 0'}}>
-                  <div style={{fontFamily: "'Playfair Display', serif", fontSize: '10rem', color: 'rgba(168,84,112,0.07)', lineHeight: 1, position: 'absolute', top: '-1.5rem', left: '-0.5rem', pointerEvents: 'none', userSelect: 'none'}}>&ldquo;</div>
-                  <p style={{fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 300, fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.85, margin: '0.5rem 0 0.85rem', position: 'relative'}}>This is becoming <span style={{background: '#FAEDF1', color: '#A85470', padding: '1px 5px', borderRadius: '3px', fontWeight: 500}}>more of a problem than it&apos;s helping.</span> Customers are getting frustrated. They got a text saying stuff&apos;s ready, but not everything is ready. <span style={{fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)'}}>— Ryan</span></p>
+                  <div style={{fontFamily: "'Lora', serif", fontSize: '10rem', color: 'rgba(168,84,112,0.07)', lineHeight: 1, position: 'absolute', top: '-1.5rem', left: '-0.5rem', pointerEvents: 'none', userSelect: 'none'}}>&ldquo;</div>
+                  <p style={{fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.85, margin: '0.5rem 0 0.85rem', position: 'relative'}}>This is becoming <span style={{background: 'var(--accent-light)', color: '#A85470', padding: '1px 5px', borderRadius: '3px', fontWeight: 500}}>more of a problem than it&apos;s helping.</span> Customers are getting frustrated. They got a text saying stuff&apos;s ready, but not everything is ready. <span style={{fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)'}}>— Ryan</span></p>
                 </div>
               </div>
             </div>
@@ -353,7 +286,7 @@ export default function NimbleRxLifecycleCaseStudy() {
 
           {/* Before journey map */}
           <div style={{marginTop: '2rem', overflowX: 'auto'}}>
-            <div style={{fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.25, marginBottom: '1rem'}}>Pharmacy lifecycle: before</div>
+            <div style={{fontFamily: "'Lora', serif", fontSize: '1.5rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.25, marginBottom: '1rem'}}>Pharmacy lifecycle: before</div>
             <div className="bpb">
               <div className="g7">
                 <div className="sl e"></div>
@@ -449,12 +382,12 @@ export default function NimbleRxLifecycleCaseStudy() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" strokeWidth="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
               </div>
               <div>
-                <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem'}}>Sales · Integration</div>
+                <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.4rem'}}>Sales · Integration</div>
                 <div style={{fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem'}}>Restrict sales to compatible pharmacy systems</div>
                 <ul style={{margin: 0, paddingLeft: '1.1rem', display: 'flex', flexDirection: 'column', gap: '0.35rem'}}>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Identified which pharmacy systems consistently produced poor integrations</li>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Built that into the sales qualification process</li>
-                  <li style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Prevented a known source of early churn before it started</li>
+                  <li style={{fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Identified which pharmacy systems consistently produced poor integrations</li>
+                  <li style={{fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Built that into the sales qualification process</li>
+                  <li style={{fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.5, fontWeight: 300}}>Prevented a known source of early churn before it started</li>
                 </ul>
               </div>
             </div>
@@ -464,9 +397,9 @@ export default function NimbleRxLifecycleCaseStudy() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" strokeWidth="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.4 2 2 0 0 1 3.55 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
               </div>
               <div>
-                <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem'}}>Patient · Adoption</div>
+                <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.4rem'}}>Patient · Adoption</div>
                 <div style={{fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem'}}>Deploy a patient education phase via text messaging</div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>Introduced a dedicated patient education period triggered at the transitional phase where most confusion occurred. We used Nimble&apos;s existing text messaging infrastructure to reach patients before the phase change happened.</div>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>Introduced a dedicated patient education period triggered at the transitional phase where most confusion occurred. We used Nimble&apos;s existing text messaging infrastructure to reach patients before the phase change happened.</div>
               </div>
             </div>
 
@@ -475,9 +408,9 @@ export default function NimbleRxLifecycleCaseStudy() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" strokeWidth="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
               </div>
               <div>
-                <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem'}}>Engineering · Integration</div>
+                <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.4rem'}}>Engineering · Integration</div>
                 <div style={{fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem'}}>Invest in smoother integration infrastructure</div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>Secured investment to build out more robust integrations for the pharmacy systems we do support, cutting down the disruption that was driving early churn.</div>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>Secured investment to build out more robust integrations for the pharmacy systems we do support, cutting down the disruption that was driving early churn.</div>
               </div>
             </div>
 
@@ -486,9 +419,9 @@ export default function NimbleRxLifecycleCaseStudy() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" strokeWidth="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
               </div>
               <div>
-                <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.4rem'}}>Product · CS · Communications</div>
+                <div style={{fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.4rem'}}>Product · CS · Communications</div>
                 <div style={{fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.35, marginBottom: '0.6rem'}}>Establish SLAs for bugs and enhancement requests</div>
-                <div style={{fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>Built out clear service level agreements. Product committed to reviewing and triaging all incoming requests on a defined timeline, and CS developed criteria to distinguish bugs from knowledge gaps, reducing unnecessary escalations and giving pharmacies something they&apos;d never had before: confirmation that their issues were moving.</div>
+                <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.65, fontWeight: 300}}>Built out clear service level agreements. Product committed to reviewing and triaging all incoming requests on a defined timeline, and CS developed criteria to distinguish bugs from knowledge gaps, reducing unnecessary escalations and giving pharmacies something they&apos;d never had before: confirmation that their issues were moving.</div>
               </div>
             </div>
 
@@ -597,33 +530,34 @@ export default function NimbleRxLifecycleCaseStudy() {
           <h2 className="cs-section-title">Cross-functional problems surfaced, aligned, and acted on</h2>
           <p>The research didn&apos;t just identify friction. It put Sales, CS, Product, and Onboarding in the same room with the same problem. That alignment was the first win.</p>
 
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', margin: '1.5rem 0'}}>
-            <div style={{background: '#F9F0F2', borderRadius: '8px', padding: '1.5rem'}}>
-              <div style={{fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 500, color: 'var(--accent)', lineHeight: 1, marginBottom: '0.5rem'}}>48h</div>
-              <div style={{fontSize: '0.82rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.25rem'}}>Bug resolution + SLAs</div>
-              <div style={{fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.6}}>Down from weeks. The product team resolved 200+ cases and maintained a fast resolution pace, directly reducing the black hole experience that had left pharmacies feeling ignored.</div>
+          {/* Tier 1: two quantitative stats */}
+          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', margin: '1.5rem 0 0'}}>
+            <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.12)', borderRadius: '4px', padding: '1.75rem 2rem'}}>
+              <div style={{fontFamily: "'JetBrains Mono', monospace", fontSize: '2.8rem', fontWeight: 700, color: 'var(--accent)', lineHeight: 1, marginBottom: '0.6rem'}}>48h</div>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.4rem'}}>Bug resolution + SLAs</div>
+              <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.65}}>Down from weeks. Product resolved 200+ cases at pace, eliminating the black hole experience that eroded pharmacy trust.</div>
             </div>
-            <div style={{background: '#F9F0F2', borderRadius: '8px', padding: '1.5rem'}}>
-              <div style={{fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 500, color: 'var(--accent)', lineHeight: 1, marginBottom: '0.5rem'}}>+20</div>
-              <div style={{fontSize: '0.82rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.25rem'}}>NPS improvement</div>
-              <div style={{fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.6}}>Pharmacy NPS improved by 20+ points following changes to communications and bug resolution.</div>
+            <div style={{background: '#fff', border: '1px solid rgba(168,84,112,0.12)', borderRadius: '4px', padding: '1.75rem 2rem'}}>
+              <div style={{fontFamily: "'JetBrains Mono', monospace", fontSize: '2.8rem', fontWeight: 700, color: 'var(--accent)', lineHeight: 1, marginBottom: '0.6rem'}}>+20</div>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.4rem'}}>NPS points</div>
+              <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.65}}>Pharmacy NPS improved by 20+ points following changes to communication cadence and bug resolution timelines.</div>
             </div>
-            <div style={{background: '#F9F0F2', borderRadius: '8px', padding: '1.5rem'}}>
-              <div style={{marginBottom: '0.5rem'}}>
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A85470" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.55 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l1.05-1.05a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-              </div>
-              <div style={{fontSize: '0.82rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.25rem'}}>Patient confusion inbounds</div>
-              <div style={{fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.6}}>A dedicated education period reduced patient confusion calls during phase transition. Engagement and adoption also went up, with relative engagement reaching 70%+.</div>
+          </div>
+
+          {/* Tier 2: two qualitative outcomes as definition rows */}
+          <div style={{display: 'flex', flexDirection: 'column', margin: '1.25rem 0 1.5rem'}}>
+            <div style={{display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '0 2rem', padding: '1.1rem 0', borderTop: '1px solid var(--border)', alignItems: 'baseline'}}>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)'}}>Patient confusion inbounds</div>
+              <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.65}}>A dedicated education phase reduced patient confusion calls at the transition point. Additional resources were allocated for patient education marketing materials and SMS copy testing to improve clarity.</div>
             </div>
-            <div style={{background: '#F9F0F2', borderRadius: '8px', padding: '1.5rem'}}>
-              <div style={{fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 500, color: 'var(--accent)', lineHeight: 1, marginBottom: '0.5rem'}}>↓</div>
-              <div style={{fontSize: '0.82rem', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.25rem'}}>Integration-related churn</div>
-              <div style={{fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.6}}>Restricting sales to compatible pharmacy systems reduced churn from poor integrations.</div>
+            <div style={{display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '0 2rem', padding: '1.1rem 0', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', alignItems: 'baseline'}}>
+              <div style={{fontFamily: "'Lora', serif", fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)'}}>Integration-related churn</div>
+              <div style={{fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.65}}>Restricting sales to compatible pharmacy systems removed a known failure mode before it started.</div>
             </div>
           </div>
 
           <div style={{background: '#EBF3EF', borderRadius: '4px', padding: '1.25rem 1.5rem'}}>
-            <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sage)', marginBottom: '0.5rem'}}>A note on process</div>
+            <div style={{fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.5rem'}}>A note on process</div>
             <div style={{fontSize: '0.97rem', color: '#1E3D2F', fontWeight: 300, lineHeight: 1.7}}>These improvements are meaningful, but they&apos;re not the last fix. Fixing deep integration infrastructure takes time and continued investment. What this research did was force the order of operations: clearer communication and faster bug resolution first, deeper infrastructure second.</div>
           </div>
         </div>

@@ -497,9 +497,10 @@ footer {
 }
 
 .cs-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lora', serif;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   line-height: 1.15;
   margin-bottom: 1rem;
@@ -525,15 +526,16 @@ footer {
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--text-muted);
   font-weight: 500;
   margin-bottom: 0.6rem;
 }
 
 .cs-section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lora', serif;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   margin-bottom: 1rem;
   line-height: 1.25;
@@ -588,42 +590,47 @@ footer {
 
 /* ---- SEGMENT CARDS (lifecycle) ---- */
 .segment-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
   margin: 1.5rem 0;
 }
 
 .segment-card {
-  background: #fff;
-  border: 1px solid rgba(168,84,112,0.15);
-  border-top: 3px solid var(--accent);
-  border-radius: 4px;
-  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 3.5rem 1fr 2fr;
+  gap: 0 2rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+  align-items: baseline;
+  background: transparent;
+  border-radius: 0;
 }
 
-.segment-card.sage-top { border-top-color: var(--sage); }
+.segment-card:last-child { border-bottom: 1px solid var(--border); }
+
+.segment-card.sage-top {}
 
 .segment-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--sage);
-  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+  padding-top: 0.15rem;
 }
 
-.segment-label.pink { color: var(--accent); }
+.segment-label.pink { color: var(--text-muted); }
 
 .segment-title {
-  font-size: 0.92rem;
-  font-weight: 500;
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
   line-height: 1.35;
 }
 
 .segment-desc {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.65;
   font-weight: 300;
@@ -743,7 +750,8 @@ footer {
 @media (max-width: 760px) {
   .cs-hero { padding: 2.5rem 1.5rem 0; }
   .cs-body { padding: 2.5rem 1.5rem; }
-  .segment-grid { grid-template-columns: 1fr; }
+  .segment-card { grid-template-columns: 3rem 1fr; }
+  .segment-desc { grid-column: 2; }
   .cs-footer { padding: 1.5rem; flex-direction: column; gap: 1rem; }
 }
 
