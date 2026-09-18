@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Tien Do — UX Research Portfolio',
@@ -11,240 +10,109 @@ export default function Home() {
     <>
       <Navbar variant="home" />
 
-      {/* HERO */}
-      <section className="hero" id="hero">
-        <div className="hero-text">
-          <h1 className="hero-name">Hi, my name is Tien.</h1>
-          <div className="hero-bio">
-            <p>I&apos;m a UX researcher with 7+ years of experience turning fuzzy problems into findings teams can act on. From founding researcher at a healthcare startup to leading infotainment research at a major automotive tech company. What I love most is that curiosity is portable. A different industry just means a new set of questions, which is exactly the part I&apos;m here for.</p>
-            <p>Based in Seattle, where I live with two cats who are sassy, naughty, and completely run the household: a tuxedo 🐈‍⬛ and an orange menace 🐈.</p>
-            <p><strong>Contact me</strong><br /><a href="mailto:tieeen.do@gmail.com">tieeen.do@gmail.com</a> · <a href="https://www.linkedin.com/in/tien-do/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-          </div>
-          <div className="hero-cta">
-            <a href="/Tien-Do-Resume-2026.pdf" download className="btn-outline">Download resume</a>
-          </div>
-        </div>
-        <div className="hero-visual">
-          <div className="hero-visual-inner">
-            <div className="avatar-placeholder">
-              <svg width="0" height="0" style={{ position: 'absolute' }}>
-                <defs>
-                  <clipPath id="blob" clipPathUnits="objectBoundingBox">
-                    <path d="M0.18 0 L0.82 0 C0.92 0 1 0.08 1 0.18 L1 0.82 C1 0.92 0.92 1 0.82 1 L0.18 1 C0.08 1 0 0.92 0 0.82 L0 0.18 C0 0.08 0.08 0 0.18 0Z"/>
-                  </clipPath>
-                </defs>
-              </svg>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/photo.jpg" alt="Tien Do" style={{ width: '460px', height: '546px', objectFit: 'cover', objectPosition: 'center', clipPath: 'url(#blob)', display: 'block' }} />
-            </div>
+      <div className="letter-page">
 
-            {/* Floating pills — bottom cluster */}
-            <div style={{ position: 'absolute', bottom: '16%', left: '-8%', animation: 'float1 3.5s ease-in-out infinite' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#fff', border: '1px solid rgba(168,84,112,0.2)', borderRadius: '100px', padding: '0.35rem 0.85rem', fontSize: '0.78rem', color: '#6B4F5A', fontWeight: 400, whiteSpace: 'nowrap', boxShadow: '0 2px 12px rgba(168,84,112,0.08)' }}>
-                <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#366B58', flexShrink: 0 }}></span>Mixed-methods researcher
-              </div>
+        {/* ── LETTER INTRO ── */}
+        <section className="letter-intro">
+          <div className="letter-intro-text">
+            <h1 className="letter-name">Hi, my name is Tien.</h1>
+            <div className="letter-bio">
+              <p>UX researcher with 7+ years on B2B and B2C products, from automotive to healthcare. Right now I run research in the pharmacy space and lead project teams through execution — untangling hard problems so the work lands for both users and the business.</p>
+              <p>I&apos;m based in Seattle and yes, I do enjoy the rain. In my free time I catch up on reading and crochet cat beanies. I have two cats who are sassy, naughty, and completely run the household: a tuxedo 🐈‍⬛ and an orange menace 🐈.</p>
+              <p><strong>Contact me</strong><br /><a href="mailto:tieeen.do@gmail.com">tieeen.do@gmail.com</a> · <a href="https://www.linkedin.com/in/tien-do/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
             </div>
-            <div style={{ position: 'absolute', bottom: '6%', left: '50%', transform: 'translateX(-50%)', animation: 'float2 4.2s ease-in-out infinite' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#fff', border: '1px solid rgba(168,84,112,0.2)', borderRadius: '100px', padding: '0.35rem 0.85rem', fontSize: '0.78rem', color: '#6B4F5A', fontWeight: 400, whiteSpace: 'nowrap', boxShadow: '0 2px 12px rgba(168,84,112,0.08)' }}>
-                <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#366B58', flexShrink: 0 }}></span>Cat mom 🐱
-              </div>
-            </div>
-            <div style={{ position: 'absolute', bottom: '16%', right: '-8%', animation: 'float3 3s ease-in-out infinite', animationDelay: '0.8s' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#fff', border: '1px solid rgba(168,84,112,0.2)', borderRadius: '100px', padding: '0.35rem 0.85rem', fontSize: '0.78rem', color: '#6B4F5A', fontWeight: 400, whiteSpace: 'nowrap', boxShadow: '0 2px 12px rgba(168,84,112,0.08)' }}>
-                <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#366B58', flexShrink: 0 }}></span>Seattle-based
-              </div>
-            </div>
-
-            {/* Floating cat photos */}
-            <div style={{ position: 'absolute', bottom: '-6%', left: '2%', animation: 'float3 3.8s ease-in-out infinite', zIndex: 2 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/cat-tuxedo.jpg" alt="My tuxedo cat" style={{ width: '82px', height: '82px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #fff', boxShadow: '0 4px 16px rgba(45,26,34,0.18)', display: 'block' }} />
-            </div>
-            <div style={{ position: 'absolute', bottom: '-20%', right: '-6%', animation: 'float1 4.5s ease-in-out infinite', animationDelay: '0.5s', zIndex: 2 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/cat-orange.jpg" alt="My orange cat" style={{ width: '82px', height: '82px', borderRadius: '50%', objectFit: 'cover', border: '3px solid #fff', boxShadow: '0 4px 16px rgba(45,26,34,0.18)', display: 'block' }} />
+            <div className="letter-cta">
+              <a href="/Tien-Do-Resume-2026.pdf" download className="btn-outline">Download resume</a>
             </div>
           </div>
-        </div>
-      </section>
+          <div className="letter-portrait">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/photo.jpg" alt="Tien Do" />
+          </div>
+        </section>
 
-      {/* CASE STUDIES */}
-      <section id="work">
-        <p className="section-label">Selected work</p>
-        <h2 className="section-title">Take a look at my previous work</h2>
-        <p className="section-subtitle">A selection of studies spanning enterprise SaaS and consumer products, each started with a real user problem and ended with a measurable change.</p>
-
-        <div className="work-grid">
-
-          {/* Lifecycle card */}
-          <a href="/nimblerx-lifecycle-case-study" style={{ background: '#FFFFFF', border: '0.5px solid rgba(168,84,112,0.15)', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', display: 'flex', flexDirection: 'column', transition: 'border-color 0.2s' }}>
-            <div style={{ height: '180px', overflow: 'hidden' }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/nimblerx-lifecycle-preview.png" alt="NimbleRx Pharmacy Lifecycle" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
-            </div>
-            <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.6rem', flex: 1 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)' }}>NimbleRx · 2025</span>
-                <span style={{ fontSize: '0.65rem', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#366B58', background: '#EBF3EF', padding: '0.2rem 0.5rem', borderRadius: '2px' }}>Service design</span>
-              </div>
-              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.3, margin: 0 }}>Understanding where pharmacies fall off: before, during, and after launch</h3>
-              <div style={{ display: 'flex', gap: '1.5rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(168,84,112,0.12)', marginTop: 'auto' }}>
-                <div><div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 500, color: '#A85470', lineHeight: 1 }}>48h</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>bug resolution</div></div>
-                <div><div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 500, color: '#A85470', lineHeight: 1 }}>+20</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>NPS points</div></div>
-              </div>
-            </div>
-          </a>
-
-          {/* Checkout card */}
-          <a href="/nimblerx-case-study" style={{ background: '#FFFFFF', border: '0.5px solid rgba(168,84,112,0.15)', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', display: 'flex', flexDirection: 'column', transition: 'border-color 0.2s' }}>
-            <div style={{ height: '180px', overflow: 'hidden' }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/nimblerx-checkout-preview.jpeg" alt="NimbleRx Pharmacy Checkout" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
-            </div>
-            <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.6rem', flex: 1 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)' }}>NimbleRx · 2023</span>
-                <span style={{ fontSize: '0.65rem', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#366B58', background: '#EBF3EF', padding: '0.2rem 0.5rem', borderRadius: '2px' }}>Mixed methods</span>
-              </div>
-              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.3, margin: 0 }}>Why pharmacies weren&apos;t using checkout, and what it was costing us</h3>
-              <div style={{ display: 'flex', gap: '1.5rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(168,84,112,0.12)', marginTop: 'auto' }}>
-                <div><div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 500, color: '#A85470', lineHeight: 1 }}>+30%</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>feature usage</div></div>
-                <div><div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 500, color: '#A85470', lineHeight: 1 }}>+3k</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>fills per week</div></div>
-              </div>
-            </div>
-          </a>
-
-          {/* Telenav card */}
-          <a href="/telenav-case-study" style={{ background: '#FFFFFF', border: '0.5px solid rgba(168,84,112,0.15)', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', display: 'flex', flexDirection: 'column', transition: 'border-color 0.2s' }}>
-            <div style={{ height: '180px', overflow: 'hidden' }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/telenav-product.png" alt="Telenav In-Car Commerce" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
-            </div>
-            <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.6rem', flex: 1 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)' }}>Telenav · 2020</span>
-                <span style={{ fontSize: '0.65rem', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#366B58', background: '#EBF3EF', padding: '0.2rem 0.5rem', borderRadius: '2px' }}>Evaluative</span>
-              </div>
-              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1rem', fontWeight: 500, color: 'var(--text-primary)', lineHeight: 1.3, margin: 0 }}>Building a voice ordering experience safe to use while driving</h3>
-              <div style={{ display: 'flex', gap: '1.5rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(168,84,112,0.12)', marginTop: 'auto' }}>
-                <div><div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 500, color: '#A85470', lineHeight: 1 }}>6</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>usability sessions</div></div>
-                <div><div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 500, color: '#A85470', lineHeight: 1 }}>✓</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>protocol approved</div></div>
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </section>
-
-      {/* RESUME */}
-      <section id="resume">
-        <p className="section-label">Experience</p>
-        <h2 className="section-title">Resume</h2>
-        <p className="section-subtitle">8+ years of UX research across B2B and B2C products in consumer mobile, pharmacy tech, automotive, and education.</p>
-
-        <div className="resume-layout">
-          <div className="resume-main">
-            <div className="resume-section">
-              <div className="resume-section-title">Work experience</div>
-
-              <div className="exp-item">
-                <div className="exp-role" style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.1rem' }}>NimbleRx</div>
-                <div className="exp-company" style={{ fontStyle: 'italic', marginBottom: '0.75rem' }}>A platform that helps independent pharmacies serve patients digitally.</div>
-
-                <div className="exp-header">
-                  <div className="exp-role">Senior UX Researcher</div>
-                  <div className="exp-date">December 2022 – Present</div>
-                </div>
-                <ul className="exp-bullets">
-                  <li>Increased patient app adoption by 10% through user discovery, usability assessment, and A/B testing on a direct-to-consumer mobile product.</li>
-                  <li>Increased fill volume by 30% and onboarded 20+ new pharmacies by identifying pain points through qualitative research including interviews, contextual inquiry, and concept testing.</li>
-                  <li>Led service design workshops with leaders across Product, CS, and Sales to define how Nimble would expand into new pharmacy types.</li>
-                </ul>
-
-                <div className="exp-header" style={{ marginTop: '0.75rem' }}>
-                  <div className="exp-role">UX Researcher</div>
-                  <div className="exp-date">February 2021 – December 2022</div>
-                </div>
-                <ul className="exp-bullets">
-                  <li>Founding researcher across all product verticals, establishing research practice, processes, and tooling from scratch in an early-stage environment.</li>
-                  <li>Improved NPS by 15+ points by rebuilding how we collected, tracked, and reported satisfaction data to leadership.</li>
-                  <li>Built a research repository so findings didn&apos;t disappear after readouts.</li>
-                </ul>
-              </div>
-
-              <div className="exp-item">
-                <div className="exp-role" style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.1rem' }}>Telenav</div>
-                <div className="exp-company" style={{ fontStyle: 'italic', marginBottom: '0.75rem' }}>A navigation and infotainment platform for automotive OEMs, with a focus on in-car commerce.</div>
-
-                <div className="exp-header">
-                  <div className="exp-role">UX Researcher</div>
-                  <div className="exp-date">July 2019 – September 2020</div>
-                </div>
-                <ul className="exp-bullets">
-                  <li>Led generative and evaluative research for in-car commerce and infotainment products across mobile, voice, and Human-Machine Interface (HMI) platforms.</li>
-                  <li>Conducted usability and compliance testing for HMI interfaces to meet European automotive safety standards, including MirrorLink certification requirements.</li>
-                  <li>Improved usability and NPS through iterative testing for OEM infotainment, achieving System Usability Scale (SUS) above 80 and NPS above 30.</li>
-                </ul>
-
-                <div className="exp-header" style={{ marginTop: '0.75rem' }}>
-                  <div className="exp-role">UX Researcher Intern</div>
-                  <div className="exp-date">June 2018 – September 2018</div>
-                </div>
-                <ul className="exp-bullets">
-                  <li>Conducted drive-along usability tests for mobile navigation to improve onboarding and first-user experience for a major OEM client.</li>
-                  <li>Launched a beta program that gave the team a direct line to user feedback for bug tracking and fixes.</li>
-                </ul>
-              </div>
-
-              <div className="exp-item">
-                <div className="exp-role" style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.1rem' }}>Washington MESA</div>
-                <div className="exp-company" style={{ fontStyle: 'italic', marginBottom: '0.75rem' }}>A program supporting underrepresented students in math, engineering, and science achievement.</div>
-
-                <div className="exp-header">
-                  <div className="exp-role">Research Assistant</div>
-                  <div className="exp-date">April 2014 – June 2017</div>
-                </div>
-                <ul className="exp-bullets">
-                  <li>Worked on research that focused on retention rates in engineering education of underrepresented demographics at the college level.</li>
-                  <li>Assisted in content and curriculum development for project-based learning in STEM for K-12 students.</li>
-                  <li>Assisted in planning and execution of professional developments for Pacific Northwest MESA teachers.</li>
-                </ul>
-              </div>
-            </div>
+        {/* ── SELECTED WORK ── */}
+        <div id="work" className="scroll-anchor" aria-hidden="true" />
+        <section className="letter-section-outer">
+          <div className="letter-section-head">
+            <h2 className="letter-section-title">Selected work</h2>
+            <p className="letter-section-sub">A selection of studies spanning enterprise SaaS and consumer products, each started with a real user problem and ended with a measurable change.</p>
           </div>
 
-          <div className="resume-sidebar">
-            <div className="resume-section">
-              <div className="resume-section-title">Education</div>
-              <div className="edu-item">
-                <div className="edu-degree">M.S. Human-Centered Design &amp; Engineering</div>
-                <div className="edu-school">University of Washington, 2019</div>
-              </div>
-            </div>
+          <div className="work-grid">
 
-            <div className="resume-section">
-              <div className="resume-section-title">Research skills</div>
-              <ul className="exp-bullets skill-list">
-                <li>User interviews</li>
-                <li>Usability testing</li>
-                <li>Diary studies</li>
-                <li>Contextual inquiry</li>
-                <li>Ethnographic studies</li>
-                <li>Survey design</li>
-                <li>Concept testing</li>
-                <li>Focus groups</li>
-                <li>Prototyping</li>
-                <li>Design thinking workshops</li>
-                <li>UX copywriting</li>
-                <li>Written communication</li>
-              </ul>
-            </div>
+            {/* Lifecycle card */}
+            <a href="/nimblerx-lifecycle-case-study" style={{ background: '#FFFFFF', border: '0.5px solid rgba(168,84,112,0.15)', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', display: 'flex', flexDirection: 'column', transition: 'border-color 0.2s' }}>
+              <div style={{ height: '180px', overflow: 'hidden' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/nimblerx-lifecycle-preview.png" alt="NimbleRx Pharmacy Lifecycle" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
+              </div>
+              <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.6rem', flex: 1 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>NimbleRx · 2025</span>
+                  <span style={{ fontSize: '0.65rem', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#366B58', background: '#EBF3EF', padding: '0.2rem 0.5rem', borderRadius: '2px' }}>Service design</span>
+                </div>
+                <h3 style={{ fontFamily: "'Lora', serif", fontSize: '1rem', fontWeight: 600, letterSpacing: '-0.01em', color: 'var(--text-primary)', lineHeight: 1.3, margin: 0 }}>Understanding where pharmacies fall off: before, during, and after launch</h3>
+                <div style={{ display: 'flex', gap: '1.5rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(168,84,112,0.12)', marginTop: 'auto' }}>
+                  <div><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '1.1rem', fontWeight: 700, color: '#A85470', lineHeight: 1 }}>48h</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>bug resolution</div></div>
+                  <div><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '1.1rem', fontWeight: 700, color: '#A85470', lineHeight: 1 }}>+20</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>NPS points</div></div>
+                </div>
+              </div>
+            </a>
+
+            {/* Checkout card */}
+            <a href="/nimblerx-case-study" style={{ background: '#FFFFFF', border: '0.5px solid rgba(168,84,112,0.15)', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', display: 'flex', flexDirection: 'column', transition: 'border-color 0.2s' }}>
+              <div style={{ height: '180px', overflow: 'hidden' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/nimblerx-checkout-preview.jpeg" alt="NimbleRx Pharmacy Checkout" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
+              </div>
+              <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.6rem', flex: 1 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>NimbleRx · 2023</span>
+                  <span style={{ fontSize: '0.65rem', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#366B58', background: '#EBF3EF', padding: '0.2rem 0.5rem', borderRadius: '2px' }}>Mixed methods</span>
+                </div>
+                <h3 style={{ fontFamily: "'Lora', serif", fontSize: '1rem', fontWeight: 600, letterSpacing: '-0.01em', color: 'var(--text-primary)', lineHeight: 1.3, margin: 0 }}>Why pharmacies weren&apos;t using checkout, and what it was costing us</h3>
+                <div style={{ display: 'flex', gap: '1.5rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(168,84,112,0.12)', marginTop: 'auto' }}>
+                  <div><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '1.1rem', fontWeight: 700, color: '#A85470', lineHeight: 1 }}>+30%</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>feature usage</div></div>
+                  <div><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '1.1rem', fontWeight: 700, color: '#A85470', lineHeight: 1 }}>+3k</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>fills per week</div></div>
+                </div>
+              </div>
+            </a>
+
+            {/* Telenav card */}
+            <a href="/telenav-case-study" style={{ background: '#FFFFFF', border: '0.5px solid rgba(168,84,112,0.15)', borderRadius: '12px', overflow: 'hidden', textDecoration: 'none', display: 'flex', flexDirection: 'column', transition: 'border-color 0.2s' }}>
+              <div style={{ height: '180px', overflow: 'hidden' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/telenav-product.png" alt="Telenav In-Car Commerce" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
+              </div>
+              <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.6rem', flex: 1 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Telenav · 2020</span>
+                  <span style={{ fontSize: '0.65rem', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#366B58', background: '#EBF3EF', padding: '0.2rem 0.5rem', borderRadius: '2px' }}>Evaluative</span>
+                </div>
+                <h3 style={{ fontFamily: "'Lora', serif", fontSize: '1rem', fontWeight: 600, letterSpacing: '-0.01em', color: 'var(--text-primary)', lineHeight: 1.3, margin: 0 }}>Building a voice ordering experience safe to use while driving</h3>
+                <div style={{ display: 'flex', gap: '1.5rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(168,84,112,0.12)', marginTop: 'auto' }}>
+                  <div><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '1.1rem', fontWeight: 700, color: '#A85470', lineHeight: 1 }}>6</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>usability sessions</div></div>
+                  <div><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '1.1rem', fontWeight: 700, color: '#A85470', lineHeight: 1 }}>✓</div><div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '2px' }}>protocol approved</div></div>
+                </div>
+              </div>
+            </a>
 
           </div>
-        </div>
-      </section>
+        </section>
 
-<Footer />
+
+        {/* ── FOOTER ── */}
+        <footer className="letter-footer">
+          <span>© 2026 Tien Do</span>
+          <div className="letter-footer-links">
+            <a href="mailto:tieeen.do@gmail.com">tieeen.do@gmail.com</a>
+            <a href="https://www.linkedin.com/in/tien-do/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="/Tien-Do-Resume-2026.pdf" download>Resume ↓</a>
+          </div>
+        </footer>
+
+      </div>
     </>
   )
 }
